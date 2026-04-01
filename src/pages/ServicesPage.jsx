@@ -13,9 +13,10 @@ import {
   FaMobileAlt, FaPaintBrush, FaArrowRight, FaCheckCircle,
   FaBolt, FaStar, FaExternalLinkAlt, FaRocket,
   FaClipboardCheck, FaCogs, FaShieldAlt, FaChartLine,
-  FaGem, FaLayerGroup
+  FaLayerGroup, FaGem
 } from 'react-icons/fa';
 import PageBanner from '../components/PageBanner';
+import CTASection from '../components/CTASection';
 
 /* ═══════════════════════════════════════
    SERVICE DATA
@@ -780,71 +781,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ═══ CTA SECTION ═══ */}
-      <section className="svc-cta-section">
-        <div className="container">
-          <motion.div
-            className="svc-cta-card"
-            initial={{ opacity: 0, y: 30, scale: 0.98 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="svc-cta-dots" />
-            <div className="svc-cta-orb svc-cta-orb-1" />
-            <div className="svc-cta-orb svc-cta-orb-2" />
-
-            <div className="svc-cta-content">
-              <motion.div
-                className="svc-cta-badge"
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                <FaGem size={13} style={{ color: '#F59E0B' }} />
-                <span>Free consultation included</span>
-              </motion.div>
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="svc-cta-heading"
-              >
-                Ready to build something extraordinary?
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="svc-cta-text"
-              >
-                Schedule a free strategy session and discover how our services can
-                transform your digital presence and drive real growth.
-              </motion.p>
-
-              <motion.div
-                className="svc-cta-btns"
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
-                <Link to="/contact" className="svc-cta-btn-primary hoverable">
-                  Get Free Consultation <FaArrowRight size={14} />
-                </Link>
-                <Link to="/projects" className="svc-cta-btn-secondary hoverable">
-                  View Our Work
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CTASection />
     </>
   );
 }

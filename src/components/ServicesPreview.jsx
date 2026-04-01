@@ -34,7 +34,7 @@ const ServicesPreview = () => {
 
         <div className="row g-4 mt-4">
           {services.map((s, i) => (
-            <div className="col-lg-4 col-md-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+            <div className="col-lg-4 col-md-6" key={s.title} data-aos="fade-up" data-aos-delay={i * 100}>
               <div className="service-card-3d">
                 <div className="sc3d-slide sc3d-slide1">
                   <div className="sc3d-icon-area" style={{ padding: 0, height: '220px', background: s.color }}>

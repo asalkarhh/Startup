@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PageBanner from '../components/PageBanner';
 import SocialIcons3D from '../components/SocialIcons3D';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
+import CTASection from '../components/CTASection';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane, FaCheckCircle, FaHeadset } from 'react-icons/fa';
 
 const ContactPage = () => {
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
@@ -130,6 +131,17 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+
+      <CTASection 
+        badgeText="Fast Response"
+        badgeIcon={FaHeadset}
+        title="Need immediate assistance?"
+        description="Give us a call or send a direct email. Our support team is ready to provide you with the answers you need right away."
+        primaryBtnText="Call Us Now"
+        primaryBtnLink="tel:+15551234567"
+        secondaryBtnText="Email Us"
+        secondaryBtnLink="mailto:hello@nexabyte.com"
+      />
     </>
   );
 };

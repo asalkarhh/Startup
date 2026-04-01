@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
-import { FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaSearch, FaRocket } from 'react-icons/fa';
 
 const allProjects = [
   { title: 'TechVault E-Commerce', cat: 'E-Commerce', desc: 'Full-stack online store with payment integration and real-time inventory management.', gradient: 'linear-gradient(135deg,#667eea,#764ba2)', tech: ['React', 'Node.js', 'Stripe'] },
@@ -59,7 +59,16 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <CTASection />
+      <CTASection 
+        badgeText="Let's Collaborate"
+        badgeIcon={FaRocket}
+        title="Have a project in mind?"
+        description="We'd love to hear about your vision. Let's work together to create a digital experience that stands out."
+        primaryBtnText="Start a Project"
+        primaryBtnLink="/contact"
+        showSecondaryBtn={false}
+      />
+
     </>
   );
 };

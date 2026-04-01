@@ -3,6 +3,9 @@ import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/
 
 const Testimonials = () => {
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   const testimonials = [
     { name: 'Sarah Johnson', role: 'CEO, TechVault Inc.', text: 'NexaByte transformed our outdated website into a stunning e-commerce platform. Our sales increased by 300% within the first quarter. Absolutely phenomenal team!', rating: 5, initials: 'SJ', color: '#FF6B35' },
@@ -16,9 +19,35 @@ const Testimonials = () => {
   const prev = () => setCurrent(c => (c - 1 + testimonials.length) % testimonials.length);
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
-  }, [next]);
+  }, [next, isPaused, current]);
+
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) {
+      setIsPaused(false);
+      return;
+    }
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) next();
+    if (isRightSwipe) prev();
+
+    setIsPaused(false);
+  };
 
   return (
     <section className="testimonials-section section-pad">
@@ -33,7 +62,14 @@ const Testimonials = () => {
 
         <div className="row justify-content-center mt-5">
           <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <div className="testimonial-slider">
+            <div
+              className="testimonial-slider"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div className="ts-card">
                 <div className="ts-quote"><FaQuoteLeft /></div>
                 <p className="ts-text">{testimonials[current].text}</p>

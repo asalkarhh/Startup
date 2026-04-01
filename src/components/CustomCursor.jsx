@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const CustomCursor = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [dotPos, setDotPos] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
   const [visible, setVisible] = useState(false);
+  const hoverListenersRef = useRef([]);
 
   useEffect(() => {
     const isTouchDevice = 'ontouchstart' in window;
@@ -13,23 +14,38 @@ const CustomCursor = () => {
     const move = (e) => {
       setPos({ x: e.clientX, y: e.clientY });
       setDotPos({ x: e.clientX, y: e.clientY });
-      if (!visible) setVisible(true);
+      setVisible(true);
     };
+    const handleMouseOut = () => setVisible(false);
+    const handleMouseOver = () => setVisible(true);
 
     const addHoverListeners = () => {
+      const enterHandler = () => setHovering(true);
+      const leaveHandler = () => setHovering(false);
       document.querySelectorAll('a, button, .hoverable, input, textarea, select').forEach(el => {
-        el.addEventListener('mouseenter', () => setHovering(true));
-        el.addEventListener('mouseleave', () => setHovering(false));
+        el.addEventListener('mouseenter', enterHandler);
+        el.addEventListener('mouseleave', leaveHandler);
+        hoverListenersRef.current.push({ el, enterHandler, leaveHandler });
       });
     };
 
     window.addEventListener('mousemove', move);
-    window.addEventListener('mouseout', () => setVisible(false));
-    window.addEventListener('mouseover', () => setVisible(true));
-    setTimeout(addHoverListeners, 1000);
+    window.addEventListener('mouseout', handleMouseOut);
+    window.addEventListener('mouseover', handleMouseOver);
+    const timer = setTimeout(addHoverListeners, 1000);
 
-    return () => window.removeEventListener('mousemove', move);
-  }, [visible]);
+    return () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseout', handleMouseOut);
+      window.removeEventListener('mouseover', handleMouseOver);
+      clearTimeout(timer);
+      hoverListenersRef.current.forEach(({ el, enterHandler, leaveHandler }) => {
+        el.removeEventListener('mouseenter', enterHandler);
+        el.removeEventListener('mouseleave', leaveHandler);
+      });
+      hoverListenersRef.current = [];
+    };
+  }, []);
 
   if (typeof window !== 'undefined' && 'ontouchstart' in window) return null;
 

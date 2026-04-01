@@ -13,29 +13,22 @@ const Footer = () => {
   ];
 
   const services = [
-    'Website Development', 'E-Commerce Solutions', 'SEO Optimization',
-    'Google Business & Maps', 'Mobile App Development', 'UI/UX Design',
+    'Website Development',
+    'E-Commerce Solutions',
+    'SEO Optimization',
+    'Google Business & Maps',
+    'Mobile App Development',
+    'UI/UX Design',
+  ];
+
+  const legalLinks = [
+    { label: 'Privacy Policy', to: '/privacy' },
+    { label: 'Terms of Service', to: '/terms' },
+    { label: 'Cookie Policy', to: '/cookies' },
   ];
 
   return (
     <footer className="footer">
-      {/* Footer CTA */}
-      <div className="footer-cta-bar">
-        <div className="fcb-bg-shape" />
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-8" data-aos="fade-right">
-              <h2>Ready to Start Your Next Project?</h2>
-              <p>Let's create something extraordinary together.</p>
-            </div>
-            <div className="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
-              <Link to="/contact" className="btn-white-glow hoverable">
-                Get Started <FaArrowRight className="btn-arrow" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Footer */}
       <div className="footer-main">
@@ -59,7 +52,9 @@ const Footer = () => {
               <h4 className="footer-heading">Quick Links</h4>
               <ul className="footer-link-list">
                 {quickLinks.map((l, i) => (
-                  <li key={i}><Link to={l.to}>{l.label}</Link></li>
+                  <li key={i}>
+                    <Link to={l.to}>{l.label}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -68,17 +63,27 @@ const Footer = () => {
               <h4 className="footer-heading">Services</h4>
               <ul className="footer-link-list">
                 {services.map((s, i) => (
-                  <li key={i}><Link to="/services">{s}</Link></li>
+                  <li key={i}>
+                    <Link to="/services">{s}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
 
             <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <h4 className="footer-heading">Newsletter</h4>
-              <p className="footer-nl-text">Subscribe for the latest updates and insights.</p>
-              <form className="footer-nl-form" onSubmit={e => e.preventDefault()}>
-                <input type="email" placeholder="Your email" className="footer-nl-input" />
-                <button type="submit" className="footer-nl-btn hoverable"><FaArrowRight /></button>
+              <p className="footer-nl-text">
+                Subscribe for the latest updates and insights.
+              </p>
+              <form className="footer-nl-form" onSubmit={(e) => e.preventDefault()}>
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="footer-nl-input"
+                />
+                <button type="submit" className="footer-nl-btn hoverable">
+                  <FaArrowRight />
+                </button>
               </form>
             </div>
           </div>
@@ -90,13 +95,18 @@ const Footer = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
-              <p>© {new Date().getFullYear()} NexaByte Digital. Made with <FaHeart className="heart-beat" /> by NexaByte</p>
+              <p>
+                © {new Date().getFullYear()} NexaByte Digital. Made with{' '}
+                <FaHeart className="heart-beat" /> by NexaByte
+              </p>
             </div>
             <div className="col-md-6 text-md-end">
               <div className="fb-links">
-                <a href="#!">Privacy Policy</a>
-                <a href="#!">Terms</a>
-                <a href="#!">Cookies</a>
+                {legalLinks.map((link, i) => (
+                  <Link key={i} to={link.to}>
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
