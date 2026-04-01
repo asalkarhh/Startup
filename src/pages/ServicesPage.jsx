@@ -12,7 +12,7 @@ import {
   FaCode, FaShoppingCart, FaSearchDollar, FaMapMarkedAlt,
   FaMobileAlt, FaPaintBrush, FaArrowRight, FaCheckCircle,
   FaBolt, FaStar, FaExternalLinkAlt, FaRocket,
-  FaClipboardCheck, FaCogs, FaShieldAlt, FaChartLine,
+  FaClipboardCheck, FaCogs, FaShieldAlt,
   FaLayerGroup, FaGem
 } from 'react-icons/fa';
 import PageBanner from '../components/PageBanner';
