@@ -12,9 +12,8 @@ const ContactPage = () => {
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = 'Name is required';
-    if (!form.email.trim()) e.email = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Invalid email';
-    if (!form.message.trim()) e.message = 'Message is required';
+    if (!form.phone.trim()) e.phone = 'Contact number is required';
+    if (!form.subject) e.subject = 'Please select a service';
     return e;
   };
 
@@ -33,11 +32,19 @@ const ContactPage = () => {
   };
 
   const info = [
-    { icon: <FaMapMarkerAlt />, title: 'Visit Us', lines: ['123 Business Ave, Suite 456', 'Tech City, TC 78901'] },
-    { icon: <FaPhone />, title: 'Call Us', lines: ['+1 (555) 123-4567', '+1 (555) 987-6543'] },
-    { icon: <FaEnvelope />, title: 'Email Us', lines: ['hello@nexabyte.com', 'support@nexabyte.com'] },
-    { icon: <FaClock />, title: 'Hours', lines: ['Mon-Fri: 9AM-6PM', 'Sat: 10AM-2PM'] },
+    { icon: <FaMapMarkerAlt />, title: 'Visit Us', lines: ['Vita , Sangli', 'Maharashtra, 415 311'] },
+    { icon: <FaPhone />, title: 'Call Us', lines: ['+91 8087818729', '+91 9766761763'] },
+    { icon: <FaEnvelope />, title: 'Email Us', lines: ['hello@Asalkar Techworks.com', 'support@Asalkar Techworks.com'] },
+    { 
+  icon: <FaClock />, 
+  title: 'Hours', 
+  lines: [
+    'Mon-Sat: 9AM-6PM', 
+    <>Sun: <span style={{ color: 'red', fontWeight: 'bold' }}>Closed</span></>
+  ] 
+},
   ];
+
 
   return (
     <>
@@ -66,17 +73,20 @@ const ContactPage = () => {
                         {errors.name && <span className="field-err">{errors.name}</span>}
                       </div>
                       <div className="col-md-6">
-                        <label className="form-label">Email Address *</label>
-                        <input type="email" name="email" className={`form-field ${errors.email ? 'err' : ''}`} placeholder="john@example.com" value={form.email} onChange={handle} />
-                        {errors.email && <span className="field-err">{errors.email}</span>}
+                        <label className="form-label">Email Address</label>
+                        <input type="email" name="email" className="form-field" placeholder="john@example.com" value={form.email} onChange={handle} />
                       </div>
                       <div className="col-md-6">
-                        <label className="form-label">Phone Number</label>
-                        <input type="tel" name="phone" className="form-field" placeholder="+1 (555) 123-4567" value={form.phone} onChange={handle} />
+                        <label className="form-label">Phone Number *</label>
+                        <input type="tel" name="phone" className={`form-field ${errors.phone ? 'err' : ''}`} placeholder="+91 1234567890" value={form.phone} onChange={handle} />
+                        {errors.phone && <span className="field-err">{errors.phone}</span>}
                       </div>
                       <div className="col-md-6">
-                        <label className="form-label">Service Needed</label>
-                        <select name="subject" className="form-field" value={form.subject} onChange={handle}>
+                        <label className="form-label">Service Needed *</label>
+                        <select name="subject" className={`form-field ${errors.subject ? 'err' : ''}`} value={form.subject} onChange={(e) => {
+                          handle(e);
+                          e.target.blur();
+                        }}>
                           <option value="">Select service</option>
                           <option>Website Development</option>
                           <option>E-Commerce Development</option>
@@ -84,11 +94,11 @@ const ContactPage = () => {
                           <option>Google Business & Maps</option>
                           <option>Other</option>
                         </select>
+                        {errors.subject && <span className="field-err">{errors.subject}</span>}
                       </div>
                       <div className="col-12">
-                        <label className="form-label">Your Message *</label>
-                        <textarea name="message" rows="5" className={`form-field ${errors.message ? 'err' : ''}`} placeholder="Tell us about your project..." value={form.message} onChange={handle} />
-                        {errors.message && <span className="field-err">{errors.message}</span>}
+                        <label className="form-label">Your Message</label>
+                        <textarea name="message" rows="5" className="form-field" placeholder="Tell us about your project..." value={form.message} onChange={handle} />
                       </div>
                       <div className="col-12">
                         <button type="submit" className="btn-primary-glow hoverable">
@@ -116,10 +126,14 @@ const ContactPage = () => {
 
               <div className="contact-map" data-aos="fade-up" data-aos-delay="400">
                 <iframe
-                  title="NexaByte Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019!2d-122.419!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjYiTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1634567890123"
-                  width="100%" height="220" style={{ border: 0, borderRadius: '16px' }}
-                  allowFullScreen="" loading="lazy"
+                  title="Asalkar Techworks Location"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6280.404101034591!2d74.5247757!3d17.2714247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1673e2410e551%3A0x90f70a51c435819e!2sAsalkar%20Digital!5e1!3m2!1sen!2sin!4v1775118547771!5m2!1sen!2sin"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0, borderRadius: '16px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
 
@@ -140,7 +154,7 @@ const ContactPage = () => {
         primaryBtnText="Call Us Now"
         primaryBtnLink="tel:+15551234567"
         secondaryBtnText="Email Us"
-        secondaryBtnLink="mailto:hello@nexabyte.com"
+        secondaryBtnLink="mailto:hello@Asalkar Techworks.com"
       />
     </>
   );

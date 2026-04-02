@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import PageBanner from '../components/PageBanner';
-import Stats from '../components/Stats';
+// import Stats from '../components/Stats';
+
+import saurabh from '../assets/Team/SaurabhAsalkar.jpg';
+import sumit from '../assets/Team/SumitAsalkar.jpg';
+import saurabhBhedodkar from '../assets/Team/SaurabhBhedodkar.jpg';
+
 import {
   FaCheckCircle,
   FaLinkedinIn,
@@ -13,6 +18,9 @@ import {
   FaQuoteLeft,
   FaArrowRight,
   FaEnvelope,
+  FaBullseye,
+  FaEye,
+  FaHandshake,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -22,27 +30,27 @@ import { Link } from 'react-router-dom';
    ═══════════════════════════════════════ */
 const team = [
   {
-    name: 'Alex Carter',
-    role: 'CEO & Founder',
+    name: 'Saurabh Asalkar',
+    role: 'Project Manager',
     quote: 'Building digital products that people genuinely love using.',
-    initials: 'AC',
+    initials: 'SA',
     color: '#FF6B35',
     gradient: 'linear-gradient(135deg, #FF6B35, #F59E0B)',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+    image: saurabh,
     socials: [
       { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
       { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-      { icon: FaEnvelope, url: 'mailto:alex@nexabyte.com', label: 'Email' },
+      { icon: FaEnvelope, url: 'mailto:alex@Asalkar Techworks.com', label: 'Email' },
     ],
   },
   {
-    name: 'Maya Singh',
-    role: 'Co-Founder & CTO',
+    name: 'Sumit Asalkar',
+    role: 'Full Stack Developer',
     quote: 'Clean code is not written by following rules — it comes from caring.',
-    initials: 'MS',
+    initials: 'SA',
     color: '#1D6FA5',
     gradient: 'linear-gradient(135deg, #1D6FA5, #60A5FA)',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face',
+    image: sumit,
     socials: [
       { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
       { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
@@ -50,79 +58,82 @@ const team = [
     ],
   },
   {
-    name: 'Jordan Lee',
-    role: 'Senior UI/UX Designer',
+    name: 'Saurabh Bhedodkar',
+    role: 'Backend Developer',
     quote: 'Design is intelligence made visible — every pixel tells a story.',
-    initials: 'JL',
+    initials: 'SB',
     color: '#28A745',
     gradient: 'linear-gradient(135deg, #28A745, #34D399)',
-    image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop&crop=face',
+    image: saurabhBhedodkar,
     socials: [
       { icon: FaDribbble, url: 'https://dribbble.com', label: 'Dribbble' },
       { icon: FaBehance, url: 'https://behance.net', label: 'Behance' },
       { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
     ],
   },
-  {
-    name: 'Sophia Chen',
-    role: 'SEO & Marketing Strategist',
-    quote: 'Data doesn\'t lie — let the numbers guide every marketing decision.',
-    initials: 'SC',
-    color: '#6F42C1',
-    gradient: 'linear-gradient(135deg, #6F42C1, #A78BFA)',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
-    socials: [
-      { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-      { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-      { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
-    ],
-  },
-  {
-    name: 'Ryan Brooks',
-    role: 'Project Manager',
-    quote: 'On-time delivery isn\'t luck — it\'s discipline and communication.',
-    initials: 'RB',
-    color: '#E83E8C',
-    gradient: 'linear-gradient(135deg, #E83E8C, #F472B6)',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face',
-    socials: [
-      { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-      { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-      { icon: FaEnvelope, url: 'mailto:ryan@nexabyte.com', label: 'Email' },
-    ],
-  },
-  {
-    name: 'Emma Davis',
-    role: 'Creative Director',
-    quote: 'Great branding is the art of making people feel something real.',
-    initials: 'ED',
-    color: '#F59E0B',
-    gradient: 'linear-gradient(135deg, #F59E0B, #FBBF24)',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face',
-    socials: [
-      { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
-      { icon: FaDribbble, url: 'https://dribbble.com', label: 'Dribbble' },
-      { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-    ],
-  },
+  // {
+  //   name: 'Sophia Chen',
+  //   role: 'SEO & Marketing Strategist',
+  //   quote: 'Data doesn\'t lie — let the numbers guide every marketing decision.',
+  //   initials: 'SC',
+  //   color: '#6F42C1',
+  //   gradient: 'linear-gradient(135deg, #6F42C1, #A78BFA)',
+  //   image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
+  //   socials: [
+  //     { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
+  //     { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
+  //     { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
+  //   ],
+  // },
+  // {
+  //   name: 'Ryan Brooks',
+  //   role: 'Project Manager',
+  //   quote: 'On-time delivery isn\'t luck — it\'s discipline and communication.',
+  //   initials: 'RB',
+  //   color: '#E83E8C',
+  //   gradient: 'linear-gradient(135deg, #E83E8C, #F472B6)',
+  //   image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face',
+  //   socials: [
+  //     { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
+  //     { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
+  //     { icon: FaEnvelope, url: 'mailto:ryan@Asalkar Techworks.com', label: 'Email' },
+  //   ],
+  // },
+  // {
+  //   name: 'Emma Davis',
+  //   role: 'Creative Director',
+  //   quote: 'Great branding is the art of making people feel something real.',
+  //   initials: 'ED',
+  //   color: '#F59E0B',
+  //   gradient: 'linear-gradient(135deg, #F59E0B, #FBBF24)',
+  //   image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face',
+  //   socials: [
+  //     { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
+  //     { icon: FaDribbble, url: 'https://dribbble.com', label: 'Dribbble' },
+  //     { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
+  //   ],
+  // },
 ];
 
 const timeline = [
   {
     year: '2019',
     title: 'Founded',
-    text: 'NexaByte was born with a mission to democratize premium web development.',
+    text: 'Asalkar Techworks was born with a mission to democratize premium web development.',
   },
+  /* Commented out — no past clients yet; re-enable once milestones are real
   {
     year: '2020',
     title: 'First 50 Clients',
     text: 'Expanded our team and reached our first major milestone in record time.',
   },
+  */
   {
     year: '2021',
     title: 'E-Commerce Division',
     text: 'Launched our dedicated e-commerce vertical, serving retailers worldwide.',
   },
+  /* Commented out — no past clients yet; re-enable once milestones are real
   {
     year: '2022',
     title: 'SEO Mastery',
@@ -133,6 +144,7 @@ const timeline = [
     title: '100+ Clients',
     text: 'Crossed the 100-client milestone with a 99% satisfaction rate.',
   },
+  */
   {
     year: '2024',
     title: 'Global Expansion',
@@ -198,7 +210,7 @@ function TeamMemberCard({ member, index }) {
                 : '0 6px 20px rgba(0,0,0,0.1)',
             }}
           >
-            {!imgError ? (
+          {!imgError && member.image ? (
               <img
                 src={member.image}
                 alt={member.name}
@@ -279,7 +291,7 @@ function TeamMemberCard({ member, index }) {
 const AboutPage = () => (
   <>
     <PageBanner
-      title="About NexaByte"
+      title="About Asalkar Techworks"
       subtitle="Our story, our team, and the values that drive us forward."
       breadcrumb="About"
     />
@@ -294,7 +306,7 @@ const AboutPage = () => (
               From Vision to <span className="gradient-text">Reality</span>
             </h2>
             <p className="body-text">
-              Founded in 2019, NexaByte Digital began as a small team of passionate
+              Founded in 2019, Asalkar Techworks Digital began as a small team of passionate
               developers and designers who believed that premium digital experiences
               shouldn't be reserved only for Fortune 500 companies.
             </p>
@@ -339,6 +351,36 @@ const AboutPage = () => (
       </div>
     </section>
 
+    {/* ═══ MISSION / VISION / VALUES ═══ */}
+    <section className="section-pad" style={{ background: 'var(--bg-alt)' }}>
+      <div className="container">
+        <div className="text-center" data-aos="fade-up">
+          <span className="section-label">Who We Are</span>
+          <h2 className="section-heading">
+            Driven by <span className="gradient-text">Purpose</span>
+          </h2>
+        </div>
+        <div className="row g-4 mt-4">
+          {[
+            { icon: <FaBullseye />, title: 'Our Mission', text: 'Empowering businesses with transformative digital solutions that drive sustainable growth.', color: '#FF6B35' },
+            { icon: <FaEye />,      title: 'Our Vision',  text: 'To be the most trusted digital partner for businesses worldwide, setting industry standards.', color: '#1D6FA5' },
+            { icon: <FaHandshake />,title: 'Our Values',  text: 'Integrity, innovation, and client success drive everything we do — always exceeding expectations.', color: '#28A745' },
+          ].map((v, i) => (
+            <div className="col-lg-4 col-md-6" key={i} data-aos="fade-up" data-aos-delay={i * 150}>
+              <div className="mvv-card">
+                <div className="mvv-icon-wrap" style={{ background: v.color + '15', color: v.color }}>
+                  {v.icon}
+                </div>
+                <h4>{v.title}</h4>
+                <p>{v.text}</p>
+                <div className="mvv-accent" style={{ background: v.color }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* ═══ TEAM SECTION ═══ */}
     <section className="team-section-premium">
       <div className="team-bg-shapes">
@@ -365,7 +407,7 @@ const AboutPage = () => (
             transition={{ delay: 0.1, duration: 0.6 }}
           >
             Meet the <span className="gradient-text">Experts</span> Behind
-            NexaByte
+            Asalkar Techworks
           </motion.h2>
 
           <motion.p
@@ -410,7 +452,7 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <Stats variant="premium" />
+    {/* <Stats variant="premium" /> */}{/* Commented out — no clients yet */}
   </>
 );
 

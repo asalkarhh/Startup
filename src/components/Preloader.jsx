@@ -16,8 +16,8 @@ const Preloader = () => {
         </div>
         <div className="preloader-text">
           <span className="pl-bracket">&lt;</span>
-          <span className="pl-name">Nexa</span>
-          <span className="pl-highlight">Byte</span>
+          <span className="pl-name">Asalkar</span>
+          <span className="pl-highlight">Techwork</span>
           <span className="pl-bracket"> /&gt;</span>
         </div>
         <div className="preloader-bar-track">

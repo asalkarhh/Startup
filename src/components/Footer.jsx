@@ -37,8 +37,8 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6" data-aos="fade-up">
               <Link to="/" className="footer-logo">
                 <span className="logo-sym">&lt;</span>
-                <span className="logo-n">Nexa</span>
-                <span className="logo-b">Byte</span>
+                <span className="logo-n">Asalkar</span>
+                <span className="logo-b">Techworks</span>
                 <span className="logo-sym">/&gt;</span>
               </Link>
               <p className="footer-desc">
@@ -96,8 +96,8 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <p>
-                © {new Date().getFullYear()} NexaByte Digital. Made with{' '}
-                <FaHeart className="heart-beat" /> by NexaByte
+                © {new Date().getFullYear()} Asalkar Techworks. Made with{' '}
+                <FaHeart className="heart-beat" /> by Asalkar Techworks
               </p>
             </div>
             <div className="col-md-6 text-md-end">

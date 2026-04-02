@@ -3,6 +3,7 @@ import {
   FaMobileAlt, FaSearch, FaBolt, FaHeadset,
   FaShieldAlt, FaChartBar, FaClock, FaThumbsUp
 } from 'react-icons/fa';
+import bgVideo from '../assets/background_Home.mp4';
 
 const WhyChooseUs = () => {
   const features = [
@@ -18,11 +19,20 @@ const WhyChooseUs = () => {
 
   return (
     <section className="why-section section-pad">
-      <div className="container">
+      <video
+        className="why-section-video"
+        src={bgVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="why-section-overlay" />
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="text-center" data-aos="fade-up">
           <span className="section-label">Why Choose Us</span>
           <h2 className="section-heading">
-            The <span className="gradient-text">NexaByte</span> Advantage
+            The <span className="gradient-text">Asalkar Techworks</span> Advantage
           </h2>
           <p className="section-sub">What sets us apart from every other agency out there.</p>
         </div>

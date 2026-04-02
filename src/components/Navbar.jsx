@@ -31,8 +31,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <div className="nav-inner">
           <Link to="/" className="nav-logo" onClick={() => setOpen(false)}>
             <span className="logo-sym">&lt;</span>
-            <span className="logo-n">Nexa</span>
-            <span className="logo-b">Byte</span>
+            <span className="logo-n">Asalkar</span>
+            <span className="logo-b">Techworks</span>
             <span className="logo-sym">/&gt;</span>
           </Link>
 

@@ -711,7 +711,7 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="section-label">Why NexaByte</span>
+              <span className="section-label">Why Asalkar Techworks</span>
             </motion.div>
             <motion.h2
               className="section-heading"

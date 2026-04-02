@@ -92,7 +92,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions About This Policy',
-        text: 'If you have any questions about this Privacy Policy, your personal data, or would like to exercise any of your data protection rights, please contact us at privacy@nexabyte.com or call us at +1 (555) 123-4567. Our Data Protection Officer will respond within 30 business days.',
+        text: 'If you have any questions about this Privacy Policy, your personal data, or would like to exercise any of your data protection rights, please contact us at privacy@Asalkar Techworks.com or call us at +1 (555) 123-4567. Our Data Protection Officer will respond within 30 business days.',
       },
     ],
   },
@@ -135,7 +135,7 @@ const PrivacyPage = () => (
               transition={{ delay: 0.1, duration: 0.5 }}
             >
               <p>
-                At NexaByte Digital ("we," "us," or "our"), we are committed to protecting
+                At Asalkar Techworks Digital ("we," "us," or "our"), we are committed to protecting
                 your privacy and ensuring the security of your personal information. This
                 Privacy Policy explains how we collect, use, disclose, and safeguard your
                 information when you visit our website or use our services.

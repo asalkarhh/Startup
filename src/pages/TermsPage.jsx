@@ -13,7 +13,7 @@ const sections = [
     content: [
       {
         subtitle: 'Agreement to Terms',
-        text: 'By accessing and using the NexaByte Digital website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.',
+        text: 'By accessing and using the Asalkar Techworks Digital website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.',
       },
       {
         subtitle: 'Eligibility',
@@ -27,7 +27,7 @@ const sections = [
     content: [
       {
         subtitle: 'Scope of Services',
-        text: 'NexaByte Digital provides website development, e-commerce solutions, SEO optimization, Google Business management, mobile app development, and UI/UX design services. The specific scope, deliverables, timeline, and pricing for each project are outlined in individual project proposals and contracts.',
+        text: 'Asalkar Techworks Digital provides website development, e-commerce solutions, SEO optimization, Google Business management, mobile app development, and UI/UX design services. The specific scope, deliverables, timeline, and pricing for each project are outlined in individual project proposals and contracts.',
       },
       {
         subtitle: 'Project Modifications',
@@ -35,7 +35,7 @@ const sections = [
       },
       {
         subtitle: 'Intellectual Property',
-        text: 'Upon full payment, clients receive ownership of all custom deliverables created specifically for their project. NexaByte retains the right to use generic, non-client-specific components, frameworks, and methodologies. We reserve the right to showcase completed work in our portfolio unless otherwise agreed in writing.',
+        text: 'Upon full payment, clients receive ownership of all custom deliverables created specifically for their project. Asalkar Techworks retains the right to use generic, non-client-specific components, frameworks, and methodologies. We reserve the right to showcase completed work in our portfolio unless otherwise agreed in writing.',
       },
     ],
   },
@@ -67,7 +67,7 @@ const sections = [
       },
       {
         subtitle: 'Content Responsibility',
-        text: 'Clients are solely responsible for the content they provide for their projects, including text, images, logos, and other materials. NexaByte is not responsible for any content that infringes on third-party intellectual property rights. Clients warrant that they have all necessary rights and permissions for the content they provide.',
+        text: 'Clients are solely responsible for the content they provide for their projects, including text, images, logos, and other materials. Asalkar Techworks is not responsible for any content that infringes on third-party intellectual property rights. Clients warrant that they have all necessary rights and permissions for the content they provide.',
       },
     ],
   },
@@ -81,7 +81,7 @@ const sections = [
       },
       {
         subtitle: 'Liability Cap',
-        text: 'In no event shall NexaByte Digital, its directors, employees, partners, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.',
+        text: 'In no event shall Asalkar Techworks Digital, its directors, employees, partners, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.',
       },
     ],
   },
@@ -91,7 +91,7 @@ const sections = [
     content: [
       {
         subtitle: 'Client Indemnification',
-        text: 'You agree to indemnify, defend, and hold harmless NexaByte Digital and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorney fees) arising from your use of our services, your violation of these Terms, or your violation of any rights of a third party.',
+        text: 'You agree to indemnify, defend, and hold harmless Asalkar Techworks Digital and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorney fees) arising from your use of our services, your violation of these Terms, or your violation of any rights of a third party.',
       },
     ],
   },
@@ -115,7 +115,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions About These Terms',
-        text: 'If you have any questions about these Terms of Service, please contact us at legal@nexabyte.com or write to us at NexaByte Digital, 123 Business Avenue, Suite 456, Tech City, TC 78901. We aim to respond to all inquiries within 5 business days.',
+        text: 'If you have any questions about these Terms of Service, please contact us at legal@Asalkar Techworks.com or write to us at Asalkar Techworks Digital, 123 Business Avenue, Suite 456, Tech City, TC 78901. We aim to respond to all inquiries within 5 business days.',
       },
     ],
   },
@@ -155,10 +155,10 @@ const TermsPage = () => (
               transition={{ delay: 0.1 }}
             >
               <p>
-                Welcome to NexaByte Digital. These Terms of Service ("Terms") govern your
+                Welcome to Asalkar Techworks Digital. These Terms of Service ("Terms") govern your
                 access to and use of our website, products, and services. Please read these
                 Terms carefully before engaging our services. These Terms constitute a
-                legally binding agreement between you and NexaByte Digital.
+                legally binding agreement between you and Asalkar Techworks Digital.
               </p>
             </motion.div>
 

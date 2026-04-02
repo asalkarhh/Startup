@@ -60,7 +60,7 @@ const Hero = () => {
                 </Link>
               </div>
 
-              <div className="hero-trust" data-aos="fade-up" data-aos-delay="700">
+              {/* <div className="hero-trust" data-aos="fade-up" data-aos-delay="700">
                 <div className="hero-avatars">
                   {['SJ', 'MC', 'ER', 'DT'].map((init, i) => (
                     <div key={i} className="hero-avatar" style={{ zIndex: 4 - i }}>
@@ -70,9 +70,9 @@ const Hero = () => {
                 </div>
                 <div className="hero-trust-text">
                   <strong>100+ Clients</strong>
-                  <span>trust NexaByte for their digital growth</span>
+                  <span>trust Asalkar Techworks for their digital growth</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
