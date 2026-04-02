@@ -22,21 +22,21 @@ const Hero = () => {
               <div className="hero-badge-wrap" data-aos="fade-down" data-aos-delay="300">
                 <span className="hero-badge">
                   <span className="hb-dot" />
-                  <span>🏆 #1 Digital Agency — 2025</span>
+                  <span>🇮🇳 Trusted IT Company in India</span>
                 </span>
               </div>
 
               <h1 className="hero-heading" data-aos="fade-up" data-aos-delay="400">
-                We Build Digital
-                <span className="hero-heading-accent"> Experiences </span>
-                That
-                <span className="hero-heading-accent"> Drive Growth</span>
+                Premium Web Development &amp;
+                <span className="hero-heading-accent"> Digital Solutions </span>
+                — India's Trusted
+                <span className="hero-heading-accent"> IT Company</span>
               </h1>
 
               <p className="hero-sub" data-aos="fade-up" data-aos-delay="500">
-                Transform your brand with cutting-edge web development, scalable
-                e-commerce platforms, data-driven SEO strategies, and Google
-                Business optimization that delivers measurable ROI.
+                From affordable website development to advanced SEO and e-commerce —
+                Asalkar TechWork helps Indian businesses build powerful online
+                presences that turn visitors into paying clients.
               </p>
 
               <div className="hero-btns" data-aos="fade-up" data-aos-delay="600">
@@ -72,17 +72,13 @@ const Hero = () => {
             <div className="hero-visual">
               <Cube3D />
               {/* Floating stats */}
-              {/* <div className="hero-float-card hfc-1" data-aos="zoom-in" data-aos-delay="800">
-                <div className="hfc-icon green">📈</div>
-                <div><strong>+340%</strong><span>Revenue Growth</span></div>
-              </div> */}
               {/* <div className="hero-float-card hfc-2" data-aos="zoom-in" data-aos-delay="900">
                 <div className="hfc-icon blue">🚀</div>
-                <div><strong>99.9%</strong><span>Uptime Score</span></div>
-              </div> */}
-              {/* <div className="hero-float-card hfc-3" data-aos="zoom-in" data-aos-delay="1000">
+                <div><strong>2–3 Weeks</strong><span>Website Launch</span></div>
+              </div>
+              <div className="hero-float-card hfc-3" data-aos="zoom-in" data-aos-delay="1000">
                 <div className="hfc-icon purple">⭐</div>
-                <div><strong>4.9/5</strong><span>Client Rating</span></div>
+                <div><strong>100%</strong><span>Client Satisfaction</span></div>
               </div> */}
             </div>
           </div>

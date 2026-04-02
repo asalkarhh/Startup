@@ -23,12 +23,12 @@ const AboutPreview = () => {
             <div className="about-content-wrap">
               <span className="section-label">About Us</span>
               <h2 className="section-heading">
-                Crafting Digital <span className="gradient-text">Excellence</span> Since 2019
+                India's Trusted IT Partner for <span className="gradient-text">Digital Excellence</span>
               </h2>
               <p className="about-desc">
-                Asalkar Techworks is a full-service digital agency that crafts premium websites,
-                powerful e-commerce platforms, and data-driven SEO strategies. We transform ideas
-                into digital experiences that captivate and convert.
+                Asalkar TechWork is an IT company in India delivering premium websites, powerful
+                e-commerce solutions, and proven SEO strategies. We transform your ideas into
+                digital experiences that captivate, convert, and grow your business.
               </p>
               <ul className="about-checks about-checks--centered">
                 {points.map((p, i) => (

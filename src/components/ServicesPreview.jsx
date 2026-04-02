@@ -27,9 +27,9 @@ const ServicesPreview = () => {
         <div className="text-center" data-aos="fade-up">
           <span className="section-label">Our Services</span>
           <h2 className="section-heading">
-            Solutions That <span className="gradient-text">Drive Results</span>
+            Affordable Web Development Services <span className="gradient-text">That Drive Results</span>
           </h2>
-          <p className="section-sub">Comprehensive digital services tailored to your business needs, crafted with precision.</p>
+          <p className="section-sub">Comprehensive IT services for Indian businesses — from website development to SEO optimization, crafted with precision and built to convert.</p>
         </div>
 
         <div className="row g-4 mt-4">
