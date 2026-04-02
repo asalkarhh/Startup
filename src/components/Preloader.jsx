@@ -6,12 +6,12 @@ const Preloader = () => {
       <div className="preloader-inner">
         <div className="preloader-cube-wrapper">
           <div className="preloader-cube">
-            <div className="p-cube-face p-front">N</div>
-            <div className="p-cube-face p-back">B</div>
-            <div className="p-cube-face p-right">X</div>
-            <div className="p-cube-face p-left">A</div>
-            <div className="p-cube-face p-top">.</div>
-            <div className="p-cube-face p-bottom">_</div>
+            <div className="p-cube-face p-front">A</div>
+            <div className="p-cube-face p-back">S</div>
+            <div className="p-cube-face p-right">A</div>
+            <div className="p-cube-face p-left">L</div>
+            <div className="p-cube-face p-top">K</div>
+            <div className="p-cube-face p-bottom">A</div>
           </div>
         </div>
         <div className="preloader-text">

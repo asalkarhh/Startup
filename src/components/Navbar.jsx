@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,14 +28,53 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <nav className={`nav-main ${scrolled ? 'nav-scrolled' : ''}`}>
+      <style>
+        {`
+          /* Initial stage (White background, Black text) */
+          .nav-main {
+            background-color: #ffffff !important;
+            transition: all 0.3s ease-in-out !important;
+          }
+          .nav-main .nav-link, 
+          .nav-main .theme-btn, 
+          .nav-main .nav-hamburger {
+            color: #000000 !important;
+          }
+          .nav-main .nav-link-line {
+            background-color: #0B1D32 !important;
+          }
+
+          /* Scrolled stage (Navy Blue background, White text) */
+          .nav-main.nav-scrolled {
+            background-color: #0B1D32 !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+          }
+          .nav-main.nav-scrolled .nav-link, 
+          .nav-main.nav-scrolled .theme-btn, 
+          .nav-main.nav-scrolled .nav-hamburger {
+            color: #ffffff !important;
+          }
+          .nav-main.nav-scrolled .nav-link-line {
+            background-color: #ffffff !important;
+          }
+          
+          /* Auto-convert logo to white when scrolled so it remains visible on dark blue! */
+          .nav-main.nav-scrolled .navbar-brand img {
+            filter: brightness(0) invert(1) !important;
+            transition: filter 0.3s ease-in-out;
+          }
+        `}
+      </style>
       <div className="container">
         <div className="nav-inner">
-          <Link to="/" className="nav-logo" onClick={() => setOpen(false)}>
-            <span className="logo-sym">&lt;</span>
-            <span className="logo-n">Asalkar</span>
-            <span className="logo-b">Techworks</span>
-            <span className="logo-sym">/&gt;</span>
-          </Link>
+          <Link className="navbar-brand" to="/">
+          <img 
+            src={logo} 
+            alt="Asalkar Techworks Logo" 
+            height="50" /* You can adjust the height to fit your navbar perfectly */
+            style={{ objectFit: 'contain' }}
+          />
+        </Link>
 
           <ul className="nav-links">
             {links.map(l => (

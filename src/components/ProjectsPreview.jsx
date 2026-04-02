@@ -7,10 +7,10 @@ const ProjectsPreview = () => {
 
   const projects = [
     { title: 'TechVault E-Commerce', cat: 'E-Commerce', desc: 'Full-stack store with payment integration', gradient: 'linear-gradient(135deg,#667eea,#764ba2)' },
-    { title: 'GreenLeaf Organics', cat: 'Website', desc: 'Corporate website with headless CMS', gradient: 'linear-gradient(135deg,#f093fb,#f5576c)' },
-    { title: 'CloudMetrics SaaS', cat: 'Web App', desc: 'Real-time analytics dashboard platform', gradient: 'linear-gradient(135deg,#4facfe,#00f2fe)' },
+    // { title: 'GreenLeaf Organics', cat: 'Website', desc: 'Corporate website with headless CMS', gradient: 'linear-gradient(135deg,#f093fb,#f5576c)' },
+    // { title: 'CloudMetrics SaaS', cat: 'Web App', desc: 'Real-time analytics dashboard platform', gradient: 'linear-gradient(135deg,#4facfe,#00f2fe)' },
     { title: 'LocalBites Restaurant', cat: 'SEO', desc: 'SEO & Google Business for restaurant chain', gradient: 'linear-gradient(135deg,#43e97b,#38f9d7)' },
-    { title: 'FitPro Fitness', cat: 'Web App', desc: 'Fitness tracking app with social features', gradient: 'linear-gradient(135deg,#fa709a,#fee140)' },
+    // { title: 'FitPro Fitness', cat: 'Web App', desc: 'Fitness tracking app with social features', gradient: 'linear-gradient(135deg,#fa709a,#fee140)' },
     { title: 'LuxeHomes Realty', cat: 'Website', desc: 'Premium real estate with virtual tours', gradient: 'linear-gradient(135deg,#a18cd1,#fbc2eb)' },
   ];
 

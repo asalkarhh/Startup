@@ -2,21 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaPlay } from 'react-icons/fa';
 import Cube3D from './Cube3D';
+import NetworkParticles from './NetworkParticles';
 
 const Hero = () => {
   return (
     <section className="hero" id="hero">
-      {/* Animated particles/shapes */}
-      <div className="hero-particles">
-        {[...Array(20)].map((_, i) => (
-          <div key={i} className={`hero-particle hp-${i % 5}`} style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 5}s`,
-            animationDuration: `${6 + Math.random() * 10}s`
-          }} />
-        ))}
-      </div>
+      {/* Network Particles Interactive Canvas */}
+      <NetworkParticles />
 
       {/* Gradient orbs */}
       <div className="hero-orb hero-orb-1" />
@@ -48,16 +40,16 @@ const Hero = () => {
               </p>
 
               <div className="hero-btns" data-aos="fade-up" data-aos-delay="600">
-                <Link to="/contact" className="btn-primary-glow hoverable">
-                  Start Your Project
+                <a href="tel:+918087818729" className="btn-primary-glow hoverable">
+                  Call Us Now
                   <FaArrowRight className="btn-arrow" />
-                </Link>
-                <Link to="/projects" className="btn-outline-hero hoverable">
+                </a>
+                <a href="mailto:asalkarhh@gmail.com" className="btn-outline-hero hoverable">
                   <span className="btn-play-circle">
                     <FaPlay />
                   </span>
-                  View Our Work
-                </Link>
+                  Email Us
+                </a>
               </div>
 
               {/* <div className="hero-trust" data-aos="fade-up" data-aos-delay="700">

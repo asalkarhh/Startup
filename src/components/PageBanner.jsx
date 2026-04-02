@@ -1,17 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NetworkParticles from './NetworkParticles';
 
 const PageBanner = ({ title, subtitle, breadcrumb }) => (
   <section className="page-banner">
-    <div className="pb-particles">
-      {[...Array(10)].map((_, i) => (
-        <div key={i} className={`pb-particle pb-p-${i % 4}`} style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          animationDelay: `${Math.random() * 3}s`
-        }} />
-      ))}
-    </div>
+    <NetworkParticles />
     <div className="pb-orb pb-orb-1" />
     <div className="pb-orb pb-orb-2" />
     <div className="container">

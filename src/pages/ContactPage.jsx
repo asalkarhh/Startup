@@ -152,9 +152,9 @@ const ContactPage = () => {
         title="Need immediate assistance?"
         description="Give us a call or send a direct email. Our support team is ready to provide you with the answers you need right away."
         primaryBtnText="Call Us Now"
-        primaryBtnLink="tel:+15551234567"
+        primaryBtnLink="tel:+91 9766761763"
         secondaryBtnText="Email Us"
-        secondaryBtnLink="mailto:hello@Asalkar Techworks.com"
+        secondaryBtnLink="mailto:asalkarhh@gmail.com"
       />
     </>
   );

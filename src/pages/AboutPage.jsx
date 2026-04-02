@@ -291,7 +291,7 @@ function TeamMemberCard({ member, index }) {
 const AboutPage = () => (
   <>
     <PageBanner
-      title="About Asalkar Techworks"
+      title="Asalkar Techworks"
       subtitle="Our story, our team, and the values that drive us forward."
       breadcrumb="About"
     />

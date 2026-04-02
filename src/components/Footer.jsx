@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaHeart } from 'react-icons/fa';
 import SocialIcons3D from './SocialIcons3D';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   const quickLinks = [
-    { label: 'Home', to: '/' },
+    { label: 'Home', to: '/home' },
     { label: 'About', to: '/about' },
     { label: 'Services', to: '/services' },
     { label: 'Projects', to: '/projects' },
@@ -28,18 +29,33 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ backgroundColor: '#0B1D32', position: 'relative', overflow: 'hidden' }}>
+      <style>
+        {`
+          /* Convert dark logo image to pure white to match the dark hero theme */
+          .footer-logo img {
+            filter: brightness(0) invert(1) !important;
+          }
+        `}
+      </style>
+
+      {/* Hero Theme Background Particles and Orbs */}
+      <div className="hero-orb hero-orb-1" />
+      <div className="hero-orb hero-orb-2" />
+      <div className="hero-orb hero-orb-3" />
 
       {/* Main Footer */}
-      <div className="footer-main">
+      <div className="footer-main" style={{ position: 'relative', zIndex: 1 }}>
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-4 col-md-6" data-aos="fade-up">
               <Link to="/" className="footer-logo">
-                <span className="logo-sym">&lt;</span>
-                <span className="logo-n">Asalkar</span>
-                <span className="logo-b">Techworks</span>
-                <span className="logo-sym">/&gt;</span>
+                <img 
+                  src={logo} 
+                  alt="Asalkar Techworks Logo" 
+                  height="70" 
+                  style={{ objectFit: 'contain' }}
+                />
               </Link>
               <p className="footer-desc">
                 A full-service digital agency building beautiful, high-performing
@@ -91,7 +107,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="footer-bottom">
+      <div className="footer-bottom" style={{ position: 'relative', zIndex: 1 }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
