@@ -36,7 +36,7 @@ const team = [
     initials: 'SA',
     color: '#FF6B35',
     gradient: 'linear-gradient(135deg, #FF6B35, #F59E0B)',
-    image: saurabh,
+    // image: saurabh,
     socials: [
       { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
       { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
@@ -50,7 +50,7 @@ const team = [
     initials: 'SA',
     color: '#1D6FA5',
     gradient: 'linear-gradient(135deg, #1D6FA5, #60A5FA)',
-    image: sumit,
+    // image: sumit,
     socials: [
       { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
       { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
@@ -64,7 +64,7 @@ const team = [
     initials: 'SB',
     color: '#28A745',
     gradient: 'linear-gradient(135deg, #28A745, #34D399)',
-    image: saurabhBhedodkar,
+    // image: saurabhBhedodkar,
     socials: [
       { icon: FaDribbble, url: 'https://dribbble.com', label: 'Dribbble' },
       { icon: FaBehance, url: 'https://behance.net', label: 'Behance' },
