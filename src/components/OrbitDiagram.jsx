@@ -147,8 +147,9 @@ const OrbitDiagram = () => {
       }
     );
 
-    if (wrapperRef.current) observer.observe(wrapperRef.current);
-    return () => { if (wrapperRef.current) observer.unobserve(wrapperRef.current); };
+    const wrapper = wrapperRef.current;
+    if (wrapper) observer.observe(wrapper);
+    return () => { if (wrapper) observer.unobserve(wrapper); };
   }, []); // Empty dependency array ensures this effect runs once on mount and cleans up on unmount
 
   return (

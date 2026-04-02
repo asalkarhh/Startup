@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FaArrowRight, FaPlay } from 'react-icons/fa';
 import Cube3D from './Cube3D';
 import NetworkParticles from './NetworkParticles';
