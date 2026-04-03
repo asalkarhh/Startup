@@ -6,6 +6,8 @@ import PageBanner from '../components/PageBanner';
 import saurabh from '../assets/Team/SaurabhAsalkar.jpg';
 import sumit from '../assets/Team/SumitAsalkar.jpg';
 import saurabhBhedodkar from '../assets/Team/SaurabhBhedodkar.jpg';
+import shubham from '../assets/Team/shubhamTakale.jpg';
+import aditya from '../assets/Team/aditybhavi.jpg';
 
 import {
   FaCheckCircle,
@@ -30,88 +32,69 @@ import { Link } from 'react-router-dom';
 const team = [
   {
     name: 'Saurabh Asalkar',
-    role: 'Project Manager',
-    quote: 'Building digital products that people genuinely love using.',
+    role: 'Founder',
+    // quote: 'Building digital products that people genuinely love using.',
     initials: 'SA',
     color: '#FF6B35',
     gradient: 'linear-gradient(135deg, #FF6B35, #F59E0B)',
     image: saurabh,
     socials: [
-      { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-      { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-      { icon: FaEnvelope, url: 'mailto:alex@Asalkar Techworks.com', label: 'Email' },
+      { icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/saurabh-asalkar/', label: 'LinkedIn' },
+      // { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
+      // { icon: FaEnvelope, url: 'mailto:alex@Asalkar Techworks.com', label: 'Email' },
     ],
   },
   {
     name: 'Sumit Asalkar',
-    role: 'Full Stack Developer',
-    quote: 'Clean code is not written by following rules — it comes from caring.',
+    role: 'Co-Founder',
+    // quote: 'Clean code is not written by following rules — it comes from caring.',
     initials: 'SA',
     color: '#1D6FA5',
     gradient: 'linear-gradient(135deg, #1D6FA5, #60A5FA)',
      image: sumit,
     socials: [
-      { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-      { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
-      { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
+      { icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/sumit-asalkar-1759a5277/', label: 'LinkedIn' },
+      // { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
+      // { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
     ],
   },
+];
+
+const expertTeam = [
   {
     name: 'Saurabh Bhedodkar',
-    role: 'Backend Developer',
-    quote: 'Design is intelligence made visible — every pixel tells a story.',
+    role: 'Fullstack Developer',
     initials: 'SB',
     color: '#28A745',
     gradient: 'linear-gradient(135deg, #28A745, #34D399)',
-    image: saurabhBhedodkar,
+    image: saurabhBhedodkar, // Set to null to show initials fallback, or add a real image import here
     socials: [
-      { icon: FaDribbble, url: 'https://dribbble.com', label: 'Dribbble' },
-      { icon: FaBehance, url: 'https://behance.net', label: 'Behance' },
       { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
     ],
   },
-  // {
-  //   name: 'Sophia Chen',
-  //   role: 'SEO & Marketing Strategist',
-  //   quote: 'Data doesn\'t lie — let the numbers guide every marketing decision.',
-  //   initials: 'SC',
-  //   color: '#6F42C1',
-  //   gradient: 'linear-gradient(135deg, #6F42C1, #A78BFA)',
-  //   image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
-  //   socials: [
-  //     { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-  //     { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-  //     { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
-  //   ],
-  // },
-  // {
-  //   name: 'Ryan Brooks',
-  //   role: 'Project Manager',
-  //   quote: 'On-time delivery isn\'t luck — it\'s discipline and communication.',
-  //   initials: 'RB',
-  //   color: '#E83E8C',
-  //   gradient: 'linear-gradient(135deg, #E83E8C, #F472B6)',
-  //   image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face',
-  //   socials: [
-  //     { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-  //     { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-  //     { icon: FaEnvelope, url: 'mailto:ryan@Asalkar Techworks.com', label: 'Email' },
-  //   ],
-  // },
-  // {
-  //   name: 'Emma Davis',
-  //   role: 'Creative Director',
-  //   quote: 'Great branding is the art of making people feel something real.',
-  //   initials: 'ED',
-  //   color: '#F59E0B',
-  //   gradient: 'linear-gradient(135deg, #F59E0B, #FBBF24)',
-  //   image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face',
-  //   socials: [
-  //     { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
-  //     { icon: FaDribbble, url: 'https://dribbble.com', label: 'Dribbble' },
-  //     { icon: FaLinkedinIn, url: 'https://linkedin.com', label: 'LinkedIn' },
-  //   ],
-  // },
+  {
+    name: 'Shubham Takale',
+    role: 'Fullstack Developer',
+    initials: 'SC',
+    color: '#6F42C1',
+    gradient: 'linear-gradient(135deg, #6F42C1, #A78BFA)',
+    image: shubham,
+    socials: [
+      { icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/shubham-takale-504187140/', label: 'LinkedIn' },
+    ],
+  },
+  {
+    name: 'Aditya Bhavi',
+    role: 'Fullstack Developer',
+    initials: 'RB',
+    color: '#E83E8C',
+    gradient: 'linear-gradient(135deg, #E83E8C, #F472B6)',
+    image: aditya,
+    socials: [
+      { icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/aditya-bhavi/', label: 'LinkedIn' },
+    ],
+  },
+  
 ];
 
 const timeline = [
@@ -243,14 +226,16 @@ function TeamMemberCard({ member, index }) {
             {member.role}
           </span>
 
-          {/* Quote */}
-          <div className="tmc-quote-wrap">
-            <FaQuoteLeft
-              className="tmc-quote-icon"
-              style={{ color: `${member.color}30` }}
-            />
-            <p className="tmc-quote">{member.quote}</p>
-          </div>
+          {/* Quote (Only render if a quote exists) */}
+          {member.quote && (
+            <div className="tmc-quote-wrap">
+              <FaQuoteLeft
+                className="tmc-quote-icon"
+                style={{ color: `${member.color}30` }}
+              />
+              <p className="tmc-quote">{member.quote}</p>
+            </div>
+          )}
 
           {/* Bottom social links (always visible, for mobile) */}
           <div className="tmc-social-row">
@@ -421,9 +406,29 @@ const AboutPage = () => (
           </motion.p>
         </div>
 
-        <div className="row g-4 mt-5">
+        <div className="row g-4 mt-5 justify-content-center">
           {team.map((member, i) => (
             <TeamMemberCard key={i} member={member} index={i} />
+          ))}
+        </div>
+
+        {/* Expert Team Section */}
+        <div className="text-center mt-5 pt-4">
+          <motion.h3
+            className="section-heading"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            style={{ fontSize: '2rem' }}
+          >
+            External Technical <span className="gradient-text">Industry Experts</span>
+          </motion.h3>
+        </div>
+
+        <div className="row g-4 mt-4 justify-content-center">
+          {expertTeam.map((member, i) => (
+            <TeamMemberCard key={`expert-${i}`} member={member} index={i} />
           ))}
         </div>
 

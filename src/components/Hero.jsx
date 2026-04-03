@@ -1,9 +1,10 @@
-import React from 'react';
-import { FaArrowRight, FaPlay } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 import Cube3D from './Cube3D';
 import NetworkParticles from './NetworkParticles';
 
 const Hero = () => {
+  const [isWhatsAppHovered, setIsWhatsAppHovered] = useState(false);
   return (
     <section className="hero" id="hero">
       {/* Network Particles Interactive Canvas */}
@@ -43,12 +44,27 @@ const Hero = () => {
                   Call Us Now
                   <FaArrowRight className="btn-arrow" />
                 </a>
-                <a href="mailto:asalkarhh@gmail.com" className="btn-outline-hero hoverable">
-                  <span className="btn-play-circle">
-                    <FaPlay />
-                  </span>
-                  Email Us
-                </a>
+              <a
+                href="https://wa.me/918087818729" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-outline-hero hoverable"
+                style={{
+                  backgroundColor: isWhatsAppHovered ? '#1DA851' : '#25D366', // Darker green on hover
+                  borderColor: '#25D366',
+                  color: '#fff',
+                  transition: 'background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease', // Smooth transition
+                  transform: isWhatsAppHovered ? 'translateY(-3px)' : 'translateY(0)', // Subtle lift
+                  boxShadow: isWhatsAppHovered ? '0 8px 20px rgba(37, 211, 102, 0.4)' : 'none', // Glow effect
+                }}
+                onMouseEnter={() => setIsWhatsAppHovered(true)}
+                onMouseLeave={() => setIsWhatsAppHovered(false)}
+              >
+                <span className="btn-play-circle" style={{ backgroundColor: '#fff' }}>
+                  <FaWhatsapp color="#25D366" size={24} />
+                </span>
+                Chat on WhatsApp
+              </a>
               </div>
 
               {/* <div className="hero-trust" data-aos="fade-up" data-aos-delay="700">
