@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
-const Navbar = ({ darkMode, toggleDarkMode }) => {
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -35,8 +35,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             background-color: #ffffff !important;
             transition: all 0.3s ease-in-out !important;
           }
-          .nav-main .nav-link, 
-          .nav-main .theme-btn, 
+        .nav-main .nav-link, 
           .nav-main .nav-hamburger {
             color: #000000 !important;
           }
@@ -49,8 +48,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             background-color: #0B1D32 !important;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
           }
-          .nav-main.nav-scrolled .nav-link, 
-          .nav-main.nav-scrolled .theme-btn, 
+        .nav-main.nav-scrolled .nav-link, 
           .nav-main.nav-scrolled .nav-hamburger {
             color: #ffffff !important;
           }
@@ -92,9 +90,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </ul>
 
           <div className="nav-actions">
-            <button className="theme-btn hoverable" onClick={toggleDarkMode} aria-label="Theme toggle">
-              {darkMode ? <FaSun /> : <FaMoon />}
-            </button>
             <Link to="/contact" className="nav-cta hoverable">
               <span>Get Free Quote</span>
               <div className="nav-cta-shine" />

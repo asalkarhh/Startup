@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaArrowRight, FaWhatsapp } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import Cube3D from './Cube3D';
 import NetworkParticles from './NetworkParticles';
 
@@ -40,9 +40,11 @@ const Hero = () => {
               </p>
 
               <div className="hero-btns" data-aos="fade-up" data-aos-delay="600">
-                <a href="tel:+918087818729" className="btn-primary-glow hoverable">
+                <a href="tel:+918087818729" className="btn-primary-glow hoverable" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+                  <span className="btn-play-circle" style={{ backgroundColor: '#fff' }}>
+                    <FaPhoneAlt color="#FF6B35" size={24} />
+                  </span>
                   Call Us Now
-                  <FaArrowRight className="btn-arrow" />
                 </a>
               <a
                 href="https://wa.me/918087818729" 
