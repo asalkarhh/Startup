@@ -15,6 +15,8 @@ import ContactPage from './pages/ContactPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import CookiesPage from './pages/CookiesPage';
+import { Analytics } from "@vercel/analytics/react";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -57,6 +59,7 @@ function App() {
       </main>
       <Footer />
       <ScrollToTop />
+      <Analytics />
     </div>
   );
 }
