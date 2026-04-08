@@ -16,6 +16,9 @@ import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import CookiesPage from './pages/CookiesPage';
 import { Analytics } from "@vercel/analytics/react";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-HGN2PVF7J7");
 
 
 function App() {
@@ -32,6 +35,7 @@ function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     AOS.refresh();
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
   }, [location.pathname]);
 
   useEffect(() => {
