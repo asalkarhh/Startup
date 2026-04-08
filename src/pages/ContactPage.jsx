@@ -12,14 +12,26 @@ const ContactPage = () => {
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = 'Name is required';
-    if (!form.phone.trim()) e.phone = 'Contact number is required';
+    
+    if (!form.phone.trim()) {
+      e.phone = 'Contact number is required';
+    } else if (form.phone.length !== 10) {
+      e.phone = 'Phone number must be exactly 10 digits';
+    }
+
+    if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      e.email = 'Please enter a valid email address';
+    }
+
     if (!form.subject) e.subject = 'Please select a service';
     return e;
   };
 
   const handle = (ev) => {
-    setForm({ ...form, [ev.target.name]: ev.target.value });
-    if (errors[ev.target.name]) setErrors({ ...errors, [ev.target.name]: '' });
+    const { name, value } = ev.target;
+    const newValue = name === 'phone' ? value.replace(/\D/g, '').slice(0, 10) : value;
+    setForm({ ...form, [name]: newValue });
+    if (errors[name]) setErrors({ ...errors, [name]: '' });
   };
 
   const submit = async (ev) => {
@@ -103,11 +115,12 @@ const ContactPage = () => {
                       </div>
                       <div className="col-md-6">
                         <label className="form-label">Email Address</label>
-                        <input type="email" name="email" className="form-field" placeholder="john@example.com" value={form.email} onChange={handle} />
+                        <input type="email" name="email" className={`form-field ${errors.email ? 'err' : ''}`} placeholder="john@example.com" value={form.email} onChange={handle} />
+                        {errors.email && <span className="field-err">{errors.email}</span>}
                       </div>
                       <div className="col-md-6">
                         <label className="form-label">Phone Number *</label>
-                        <input type="tel" name="phone" className={`form-field ${errors.phone ? 'err' : ''}`} placeholder="+91 1234567890" value={form.phone} onChange={handle} />
+                        <input type="tel" name="phone" className={`form-field ${errors.phone ? 'err' : ''}`} placeholder="1234567890" value={form.phone} onChange={handle} />
                         {errors.phone && <span className="field-err">{errors.phone}</span>}
                       </div>
                       <div className="col-md-6">
