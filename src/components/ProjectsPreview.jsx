@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaExternalLinkAlt, FaSearch, FaArrowRight } from 'react-icons/fa';
+import coachingImg from '../assets/images/Academy.png';
+import gymImg from '../assets/images/Gym.png';
+import realEstateImg from '../assets/images/RealEstate.png';
 
 const ProjectsPreview = () => {
   const [filter, setFilter] = useState('All');
 
   const projects = [
-    { title: 'TechVault E-Commerce', cat: 'E-Commerce', desc: 'Full-stack store with payment integration', gradient: 'linear-gradient(135deg,#667eea,#764ba2)' },
-    // { title: 'GreenLeaf Organics', cat: 'Website', desc: 'Corporate website with headless CMS', gradient: 'linear-gradient(135deg,#f093fb,#f5576c)' },
-    // { title: 'CloudMetrics SaaS', cat: 'Web App', desc: 'Real-time analytics dashboard platform', gradient: 'linear-gradient(135deg,#4facfe,#00f2fe)' },
-    { title: 'LocalBites Restaurant', cat: 'SEO', desc: 'SEO & Google Business for restaurant chain', gradient: 'linear-gradient(135deg,#43e97b,#38f9d7)' },
-    // { title: 'FitPro Fitness', cat: 'Web App', desc: 'Fitness tracking app with social features', gradient: 'linear-gradient(135deg,#fa709a,#fee140)' },
-    { title: 'LuxeHomes Realty', cat: 'Website', desc: 'Premium real estate with virtual tours', gradient: 'linear-gradient(135deg,#a18cd1,#fbc2eb)' },
+    { title: 'Elite Academy', cat: 'Website', desc: 'Complete student portal and online learning management system.', image: coachingImg, link: 'https://coachingclasses.vercel.app/' },
+    { title: 'PowerFit Gym & Fitness', cat: 'Web App', desc: 'Modern fitness platform with membership and class scheduling.', image: gymImg, link: 'https://gymdemo-bice.vercel.app/' },
+    { title: 'Estate Elite', cat: 'Website', desc: 'Premium property listings with integrated 3D virtual tours.', image: realEstateImg, link: 'https://realestate-demo-two.vercel.app/' },
   ];
 
   const filters = ['All', 'Website', 'E-Commerce', 'Web App', 'SEO'];
@@ -41,10 +41,13 @@ const ProjectsPreview = () => {
           {shown.map((p, i) => (
             <div className="col-lg-4 col-md-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
               <div className="project-card hoverable">
-                <div className="pc-image" style={{ background: p.gradient }}>
+                <div className="pc-image">
+                  <img src={p.image} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div className="pc-overlay">
                     <button className="pc-btn"><FaSearch /></button>
-                    <button className="pc-btn"><FaExternalLinkAlt /></button>
+                    <a href={p.link} target="_blank" rel="noopener noreferrer" className="pc-btn" aria-label={`Visit ${p.title}`}>
+                      <FaExternalLinkAlt />
+                    </a>
                   </div>
                   <span className="pc-badge">{p.cat}</span>
                 </div>

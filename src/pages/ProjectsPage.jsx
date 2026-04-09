@@ -2,17 +2,27 @@ import React, { useState } from 'react';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import { FaExternalLinkAlt, FaSearch, FaRocket } from 'react-icons/fa';
+import coachingImg from '../assets/images/Academy.png';
+import gymImg from '../assets/images/Gym.png';
+import realEstateImg from '../assets/images/RealEstate.png';
+import restorantImg from '../assets/images/Restorant.png';
+import ecomImg from '../assets/images/E-commerce.png';
+import glameAuraImg from '../assets/images/GlameAura.png';
+import medicoCareImg from '../assets/images/MedicoCare.png';
+import solvenImg from '../assets/images/Solven.png';
+import chatboatImg from '../assets/images/Chatboat.png';
 
 const allProjects = [
-  { title: 'TechVault E-Commerce', cat: 'E-Commerce', desc: 'Full-stack online store with payment integration and real-time inventory management.', gradient: 'linear-gradient(135deg,#667eea,#764ba2)', tech: ['React', 'Node.js', 'Stripe'] },
-  { title: 'GreenLeaf Organics', cat: 'Website', desc: 'Premium corporate website with headless CMS and dynamic content management.', gradient: 'linear-gradient(135deg,#f093fb,#f5576c)', tech: ['Next.js', 'Sanity', 'Vercel'] },
-  { title: 'CloudMetrics Dashboard', cat: 'Web App', desc: 'Real-time analytics dashboard for SaaS platform with data visualization.', gradient: 'linear-gradient(135deg,#4facfe,#00f2fe)', tech: ['React', 'D3.js', 'AWS'] },
-  { title: 'LocalBites Restaurant', cat: 'SEO', desc: 'Complete SEO overhaul and Google Business optimization for restaurant chain.', gradient: 'linear-gradient(135deg,#43e97b,#38f9d7)', tech: ['SEO', 'Google Ads', 'Analytics'] },
-  { title: 'FitPro Fitness App', cat: 'Web App', desc: 'Comprehensive fitness tracking application with social features and gamification.', gradient: 'linear-gradient(135deg,#fa709a,#fee140)', tech: ['React Native', 'Firebase', 'Node.js'] },
-  { title: 'LuxeHomes Real Estate', cat: 'Website', desc: 'Premium real estate listing website with 3D virtual tours and MLS integration.', gradient: 'linear-gradient(135deg,#a18cd1,#fbc2eb)', tech: ['Next.js', 'Three.js', 'MongoDB'] },
-  { title: 'StyleHub Fashion', cat: 'E-Commerce', desc: 'Fashion e-commerce platform with AR try-on feature and personalized recommendations.', gradient: 'linear-gradient(135deg,#ffecd2,#fcb69f)', tech: ['React', 'Shopify', 'AI/ML'] },
-  { title: 'MedCare Clinic', cat: 'SEO', desc: 'Healthcare SEO and Google Maps ranking for multi-location medical practice.', gradient: 'linear-gradient(135deg,#89f7fe,#66a6ff)', tech: ['SEO', 'Local SEO', 'PPC'] },
-  { title: 'FinTrack Banking', cat: 'Web App', desc: 'Secure banking dashboard with real-time transactions and financial analytics.', gradient: 'linear-gradient(135deg,#c3cfe2,#f5f7fa)', tech: ['React', 'TypeScript', 'GraphQL'] },
+  { title: 'Elite Academy', cat: 'Website', desc: 'Complete student portal and online learning management system.', image: coachingImg, link: 'https://coachingclasses.vercel.app/', tech: ['React', 'Node.js', 'MongoDB'] },
+  { title: 'Solven Company Profile', cat: 'SEO', desc: 'Modern company profile and landing page with advanced SEO optimization.', image: solvenImg, link: 'https://solven.in/', tech: ['SEO', 'Next.js', 'Tailwind'] },
+  { title: 'PowerFit Gym & Fitness', cat: 'Web App', desc: 'Modern fitness platform with membership and class scheduling.', image: gymImg, link: 'https://gymdemo-bice.vercel.app/', tech: ['React', 'Firebase', 'Tailwind'] },
+  
+  { title: 'Estate Elite', cat: 'Website', desc: 'Premium property listings with integrated 3D virtual tours.', image: realEstateImg, link: 'https://realestate-demo-two.vercel.app/', tech: ['Next.js', 'Three.js', 'Vercel'] },
+  { title: 'GlamAura Salon', cat: 'Web App', desc: 'Comprehensive salon management system with appointment booking and staff scheduling.', image: glameAuraImg, tech: ['React', 'Node.js', 'Express'] },
+  { title: 'Savory Bite Restaurant', cat: 'Website', desc: 'Modern restaurant website with online menu and table reservations.', image: restorantImg, link: 'https://restaurant-demo-six-sand.vercel.app/', tech: ['React', 'Tailwind', 'Vercel'] },
+  { title: 'Asalkar Healthy Hub E-Commerce', cat: 'E-Commerce', desc: 'Fashion e-commerce platform with seamless checkout and inventory management.', image: ecomImg, tech: ['React', 'Shopify', 'Tailwind'] },
+  { title: 'MedicoCare Delivery', cat: 'Website', desc: 'Modern medical delivery website for rapid pharmacy and healthcare supplies.', image: medicoCareImg, tech: ['Next.js', 'Node.js', 'Tailwind'] },
+  { title: 'Social Media Dashboard', cat: 'Web App', desc: 'Modern social media dashboard with real-time feed and user interactions.', image: chatboatImg, tech: ['React', 'Node.js', 'Socket.io'] },
 ];
 
 const ProjectsPage = () => {
@@ -38,10 +48,17 @@ const ProjectsPage = () => {
             {shown.map((p, i) => (
               <div className="col-lg-4 col-md-6" key={i} data-aos="fade-up" data-aos-delay={i * 80}>
                 <div className="project-card-full hoverable">
-                  <div className="pcf-image" style={{ background: p.gradient }}>
+                  <div className="pcf-image" style={p.gradient ? { background: p.gradient } : {}}>
+                    {p.image && <img src={p.image} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                     <div className="pcf-overlay">
                       <button className="pc-btn"><FaSearch /></button>
-                      <button className="pc-btn"><FaExternalLinkAlt /></button>
+                      {p.link ? (
+                        <a href={p.link} target="_blank" rel="noopener noreferrer" className="pc-btn" aria-label={`Visit ${p.title}`}>
+                          <FaExternalLinkAlt />
+                        </a>
+                      ) : (
+                        <button className="pc-btn"><FaExternalLinkAlt /></button>
+                      )}
                     </div>
                     <span className="pc-badge">{p.cat}</span>
                   </div>

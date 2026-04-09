@@ -1,45 +1,77 @@
 import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
+import coachingImg from '../assets/images/Academy.png';
+import gymImg from '../assets/images/Gym.png';
+import realEstateImg from '../assets/images/RealEstate.png';
+import restorantImg from '../assets/images/Restorant.png';
+import ecomImg from '../assets/images/E-commerce.png';
+import glameAuraImg from '../assets/images/GlameAura.png';
+import medicoCareImg from '../assets/images/MedicoCare.png';
+import solvenImg from '../assets/images/Solven.png';
+import chatboatImg from '../assets/images/Chatboat.png';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const projects = [
     {
-      title: 'TechVault E-Commerce',
-      category: 'E-Commerce',
-      description: 'Full-stack e-commerce platform with payment integration',
-      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    },
-    {
-      title: 'GreenLeaf Organics',
+      title: 'Elite Academy',
       category: 'Website',
-      description: 'Corporate website with CMS for organic food company',
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      description: 'Complete student portal and online learning management system.',
+      image: coachingImg,
+      link: 'https://coachingclasses.vercel.app/'
     },
     {
-      title: 'CloudMetrics Dashboard',
+      title: 'PowerFit Gym & Fitness',
       category: 'Web App',
-      description: 'Analytics dashboard for SaaS platform',
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+      description: 'Modern fitness platform with membership and class scheduling.',
+      image: gymImg,
+      link: 'https://gymdemo-bice.vercel.app/'
+    },
+    {
+      title: 'Estate Elite',
+      category: 'Website',
+      description: 'Premium property listings with integrated 3D virtual tours.',
+      image: realEstateImg,
+      link: 'https://realestate-demo-two.vercel.app/'
     },
     {
       title: 'LocalBites Restaurant',
-      category: 'SEO',
-      description: 'SEO & Google Business optimization for restaurant chain',
-      gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-    },
-    {
-      title: 'FitPro Fitness App',
-      category: 'Web App',
-      description: 'Fitness tracking application with social features',
-      gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    },
-    {
-      title: 'LuxeHomes Real Estate',
       category: 'Website',
-      description: 'Premium real estate listing website with virtual tours',
-      gradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
+      description: 'Modern restaurant website with online menu and table reservations.',
+      image: restorantImg,
+      link: 'https://restaurant-demo-six-sand.vercel.app/'
+    },
+    {
+      title: 'StyleHub E-Commerce',
+      category: 'E-Commerce',
+      description: 'Modern fashion e-commerce platform with seamless checkout.',
+      image: ecomImg,
+    },
+    {
+      title: 'GlamAura Salon',
+      category: 'Web App',
+      description: 'Comprehensive salon management system with appointment booking.',
+      image: glameAuraImg,
+    },
+    {
+      title: 'MedicoCare Delivery',
+      category: 'Website',
+      description: 'Modern medical delivery website for rapid pharmacy and healthcare supplies.',
+      image: medicoCareImg,
+    },
+    {
+      title: 'Solven Company Profile',
+      category: 'SEO',
+      description: 'Modern company profile and landing page with advanced SEO optimization.',
+      image: solvenImg,
+      link: 'https://solven.in/'
+    },
+    {
+      title: 'Social Media Dashboard',
+      category: 'Web App',
+      description: 'Modern social media dashboard with real-time feed and user interactions.',
+      image: chatboatImg,
     },
   ];
 
@@ -95,15 +127,24 @@ const Projects = () => {
               <div className="project-card">
                 <div
                   className="project-image"
-                  style={{ background: project.gradient }}
+                  style={project.gradient ? { background: project.gradient } : {}}
                 >
+                  {project.image && (
+                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  )}
                   <div className="project-overlay">
                     <button className="project-btn" aria-label="View project">
                       <FaSearch />
                     </button>
-                    <button className="project-btn" aria-label="Open project">
-                      <FaExternalLinkAlt />
-                    </button>
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-btn" aria-label={`Visit ${project.title}`}>
+                        <FaExternalLinkAlt />
+                      </a>
+                    ) : (
+                      <button className="project-btn" aria-label="Open project">
+                        <FaExternalLinkAlt />
+                      </button>
+                    )}
                   </div>
                   <div className="project-category-badge">
                     {project.category}
