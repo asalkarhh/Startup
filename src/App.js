@@ -16,6 +16,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import CookiesPage from './pages/CookiesPage';
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import ReactGA from "react-ga4";
 
 ReactGA.initialize("G-HGN2PVF7J7");
@@ -64,6 +65,7 @@ function App() {
       <Footer />
       <ScrollToTop />
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }

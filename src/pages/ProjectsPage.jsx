@@ -20,6 +20,7 @@ const allProjects = [
   { title: 'Estate Elite', cat: 'Website', desc: 'Premium property listings with integrated 3D virtual tours.', image: realEstateImg, link: 'https://realestate-demo-two.vercel.app/', tech: ['Next.js', 'Three.js', 'Vercel'] },
   { title: 'GlamAura Salon', cat: 'Web App', desc: 'Comprehensive salon management system with appointment booking and staff scheduling.', image: glameAuraImg, tech: ['React', 'Node.js', 'Express'] },
   { title: 'Savory Bite Restaurant', cat: 'Website', desc: 'Modern restaurant website with online menu and table reservations.', image: restorantImg, link: 'https://restaurant-demo-six-sand.vercel.app/', tech: ['React', 'Tailwind', 'Vercel'] },
+  
   { title: 'Asalkar Healthy Hub E-Commerce', cat: 'E-Commerce', desc: 'Fashion e-commerce platform with seamless checkout and inventory management.', image: ecomImg, tech: ['React', 'Shopify', 'Tailwind'] },
   { title: 'MedicoCare Delivery', cat: 'Website', desc: 'Modern medical delivery website for rapid pharmacy and healthcare supplies.', image: medicoCareImg, tech: ['Next.js', 'Node.js', 'Tailwind'] },
   { title: 'Social Media Dashboard', cat: 'Web App', desc: 'Modern social media dashboard with real-time feed and user interactions.', image: chatboatImg, tech: ['React', 'Node.js', 'Socket.io'] },
