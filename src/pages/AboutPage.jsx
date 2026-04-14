@@ -254,14 +254,14 @@ const AboutPage = () => (
               From Vision to <span className="gradient-text">Reality</span>
             </h2>
             <p className="body-text mb-3">
-              Founded in 2019, Asalkar Techworks Digital began as a small team of passionate
-              developers and designers who believed that premium digital experiences
+              Asalkar Techworks Digital was founded by a team of passionate
+              developers and designers who believe that premium digital experiences
               shouldn't be reserved only for Fortune 500 companies.
             </p>
             <p className="body-text">
-              Today, we're a full-service agency serving businesses across 20+
-              countries, delivering websites, e-commerce platforms, and digital
-              marketing strategies that drive real, measurable results.
+              We are a full-service agency dedicated to delivering websites,
+              e-commerce platforms, and digital marketing strategies that drive
+              real, measurable results for businesses of all sizes.
             </p>
           </div>
           <div className="col-lg-6" data-aos="fade-left" data-aos-delay="100">
