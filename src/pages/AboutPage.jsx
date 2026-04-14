@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import PageBanner from '../components/PageBanner';
 // import Stats from '../components/Stats';
+import TechStackDiagram from '../components/TechStackDiagram';
 
 import saurabh from '../assets/Team/SaurabhAsalkar.jpg';
 import sumit from '../assets/Team/SumitAsalkar.jpg';
@@ -95,43 +96,6 @@ const expertTeam = [
     ],
   },
   
-];
-
-const timeline = [
-  {
-    year: '2019',
-    title: 'Founded',
-    text: 'Asalkar Techworks was born with a mission to democratize premium web development.',
-  },
-  /* Commented out — no past clients yet; re-enable once milestones are real
-  {
-    year: '2020',
-    title: 'First 50 Clients',
-    text: 'Expanded our team and reached our first major milestone in record time.',
-  },
-  */
-  {
-    year: '2021',
-    title: 'E-Commerce Division',
-    text: 'Launched our dedicated e-commerce vertical, serving retailers worldwide.',
-  },
-  /* Commented out — no past clients yet; re-enable once milestones are real
-  {
-    year: '2022',
-    title: 'SEO Mastery',
-    text: 'Helped 60+ businesses achieve first-page Google rankings consistently.',
-  },
-  {
-    year: '2023',
-    title: '100+ Clients',
-    text: 'Crossed the 100-client milestone with a 99% satisfaction rate.',
-  },
-  */
-  {
-    year: '2024',
-    title: 'Global Expansion',
-    text: 'Opened remote offices serving clients across 20+ countries worldwide.',
-  },
 ];
 
 /* ═══ TEAM MEMBER CARD COMPONENT ═══ */
@@ -284,12 +248,12 @@ const AboutPage = () => (
     <section className="section-pad about-story-section">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6" data-aos="fade-right">
+          <div className="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
             <span className="section-label">Our Story</span>
             <h2 className="section-heading">
               From Vision to <span className="gradient-text">Reality</span>
             </h2>
-            <p className="body-text">
+            <p className="body-text mb-3">
               Founded in 2019, Asalkar Techworks Digital began as a small team of passionate
               developers and designers who believed that premium digital experiences
               shouldn't be reserved only for Fortune 500 companies.
@@ -299,36 +263,32 @@ const AboutPage = () => (
               countries, delivering websites, e-commerce platforms, and digital
               marketing strategies that drive real, measurable results.
             </p>
-            <ul className="about-page-checks">
-              {[
-                'Award-winning design team',
-                'Full-stack development expertise',
-                'Data-driven marketing strategies',
-                'Dedicated project management',
-              ].map((item, i) => (
-                <li key={i}>
-                  <FaCheckCircle className="check-icon" />
-                  {item}
-                </li>
-              ))}
-            </ul>
           </div>
-          <div className="col-lg-6" data-aos="fade-left">
-            <div className="timeline-wrap">
-              {timeline.map((t, i) => (
-                <div
-                  className="timeline-item"
-                  key={i}
-                  data-aos="fade-up"
-                  data-aos-delay={i * 100}
-                >
-                  <div className="tl-year">{t.year}</div>
-                  <div className="tl-content">
-                    <h4>{t.title}</h4>
-                    <p>{t.text}</p>
+          <div className="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div className="mvv-card hoverable" style={{ padding: '2.5rem', textAlign: 'left', height: '100%' }}>
+              <p className="body-text" style={{ fontSize: '1.05rem', marginBottom: '1.5rem' }}>
+                We combine cutting-edge technology with innovative design principles 
+                to craft custom solutions tailored to your unique goals. From intuitive 
+                user interfaces to robust, scalable backend architectures, our commitment 
+                to digital excellence has helped startups and established enterprises 
+                alike navigate the complex digital landscape with absolute confidence.
+              </p>
+              <div className="row g-3">
+                {[
+                  'Award-winning design team',
+                  'Full-stack development',
+                  'Data-driven marketing',
+                  'Dedicated management',
+                ].map((item, i) => (
+                  <div className="col-sm-6" key={i}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <FaCheckCircle style={{ color: '#FF6B35', fontSize: '1.1rem', flexShrink: 0 }} />
+                      <span style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)' }}>{item}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="mvv-accent" style={{ background: '#FF6B35' }} />
             </div>
           </div>
         </div>
@@ -361,6 +321,41 @@ const AboutPage = () => (
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ═══ OUR TECH STACK SECTION ═══ */}
+    <section className="section-pad about-tech-section">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="200">
+            <div className="about-content-wrap">
+              <span className="section-label">Our Tech</span>
+              <h2 className="section-heading">
+                The Anatomy of <span className="gradient-text">Our Excellence</span>
+              </h2>
+              <p className="about-desc">
+                We leverage a modern, battle-tested technology stack to build scalable, high-performance digital solutions. Our expertise spans across the most effective frameworks and platforms to ensure your project is built for success and longevity.
+              </p>
+              <ul className="about-page-checks">
+                {[
+                  'React & Next.js for lightning-fast UIs',
+                  'Node.js & Express for robust backends',
+                  'MongoDB & Firebase for scalable data',
+                  'Shopify & WooCommerce for e-commerce',
+                ].map((item, i) => (
+                  <li key={i}>
+                    <FaCheckCircle className="check-icon" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="col-lg-6 order-lg-1" data-aos="fade-right">
+            <TechStackDiagram />
+          </div>
         </div>
       </div>
     </section>

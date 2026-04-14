@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 
 const Preloader = () => {
   return (
@@ -15,10 +16,9 @@ const Preloader = () => {
           </div>
         </div>
         <div className="preloader-text">
-          <span className="pl-bracket">&lt;</span>
-          <span className="pl-name">Asalkar</span>
-          <span className="pl-highlight">Techwork</span>
-          <span className="pl-bracket"> /&gt;</span>
+          
+          <img src={logo} alt="Asalkar Techworks" height="60" style={{ objectFit: 'contain', margin: '0 8px', verticalAlign: 'middle', filter: 'brightness(0) invert(1)' }} />
+          
         </div>
         <div className="preloader-bar-track">
           <div className="preloader-bar-fill"></div>
