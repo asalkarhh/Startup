@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import searchlogo from '../assets/searchlogo.png';
+import asalkartechworks from '../assets/asalkartechworks.png';
 
 const technologies = [
   { label: 'React', color: '#61DAFB', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
@@ -79,7 +80,14 @@ const TechStackDiagram = () => {
         <div className="od-ring od-ring-inner" />
 
         {/* Center Logo */}
-        <div className="od-center-logo" style={{
+        <div 
+          className="od-center-logo" 
+          onMouseEnter={() => handleItemEnter('center')}
+          onMouseLeave={handleItemLeave}
+          onTouchStart={() => handleItemEnter('center')}
+          onTouchEnd={handleItemLeave}
+          onTouchCancel={handleItemLeave}
+          style={{
           position: 'absolute',
           top: '50%',
           left: '50%',
@@ -95,7 +103,11 @@ const TechStackDiagram = () => {
           border: '1px solid var(--border, #eee)',
           zIndex: 10,
         }}>
-          <img src={searchlogo} alt="Asalkar Techworks Search Logo" style={{ width: '75%', height: 'auto', objectFit: 'contain' }} />
+          <img 
+            src={hovered === 'center' ? asalkartechworks : searchlogo} 
+            alt="Asalkar Techworks Logo" 
+            style={{ width: '75%', height: 'auto', objectFit: 'contain' }} 
+          />
         </div>
 
         {/* Inner items */}
