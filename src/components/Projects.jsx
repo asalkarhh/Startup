@@ -40,7 +40,7 @@ const Projects = () => {
       category: 'Website',
       description: 'Modern restaurant website with online menu and table reservations.',
       image: restorantImg,
-      link: 'https://restaurant-demo-six-sand.vercel.app/'
+      link: 'https://hyde-sky.vercel.app/'
     },
     {
       title: 'StyleHub E-Commerce',
