@@ -15,6 +15,7 @@ import ContactPage from './pages/ContactPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import CookiesPage from './pages/CookiesPage';
+import { CertificateVerificationPage } from './features/certificateVerification';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import ReactGA from "react-ga4";
@@ -60,6 +61,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/cookies" element={<CookiesPage />} />
+          <Route path="/verify" element={<CertificateVerificationPage />} />
         </Routes>
       </main>
       <Footer />
