@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import coachingImg from '../assets/images/Academy.png';
 import gymImg from '../assets/images/Gym.png';
 import realEstateImg from '../assets/images/RealEstate.png';
 import restorantImg from '../assets/images/Restorant.png';
 import ecomImg from '../assets/images/E-commerce.png';
-import glameAuraImg from '../assets/images/GlameAura.png';
 import medicoCareImg from '../assets/images/MedicoCare.png';
 import solvenImg from '../assets/images/Solven.png';
 import chatboatImg from '../assets/images/Chatboat.png';
+import caWebsiteImg from '../assets/images/ca-website.png';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -49,10 +49,11 @@ const Projects = () => {
       image: ecomImg,
     },
     {
-      title: 'GlamAura Salon',
-      category: 'Web App',
-      description: 'Comprehensive salon management system with appointment booking.',
-      image: glameAuraImg,
+      title: 'Sharma and Associates',
+      category: 'Website',
+      description: 'A professional corporate website for a Chartered Accountant firm featuring service portfolios.',
+      image: caWebsiteImg,
+      link: 'https://ca-project-zeta.vercel.app/'
     },
     {
       title: 'MedicoCare Delivery',
@@ -124,7 +125,7 @@ const Projects = () => {
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
-              <div className="project-card">
+              <div className="project-card" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <div
                   className="project-image"
                   style={project.gradient ? { background: project.gradient } : {}}
@@ -133,9 +134,6 @@ const Projects = () => {
                     <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   )}
                   <div className="project-overlay">
-                    <button className="project-btn" aria-label="View project">
-                      <FaSearch />
-                    </button>
                     {project.link ? (
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-btn" aria-label={`Visit ${project.title}`}>
                         <FaExternalLinkAlt />
@@ -150,9 +148,9 @@ const Projects = () => {
                     {project.category}
                   </div>
                 </div>
-                <div className="project-info">
+                <div className="project-info" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                   <h4>{project.title}</h4>
-                  <p>{project.description}</p>
+                  <p style={{ flexGrow: 1, margin: 0 }}>{project.description}</p>
                 </div>
               </div>
             </div>

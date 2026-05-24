@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaExternalLinkAlt, FaSearch, FaArrowRight } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaArrowRight } from 'react-icons/fa';
 import coachingImg from '../assets/images/Academy.png';
 import gymImg from '../assets/images/Gym.png';
 import realEstateImg from '../assets/images/RealEstate.png';
@@ -40,20 +40,19 @@ const ProjectsPreview = () => {
         <div className="row g-4 mt-3">
           {shown.map((p, i) => (
             <div className="col-lg-4 col-md-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
-              <div className="project-card hoverable">
+              <div className="project-card hoverable" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <div className="pc-image">
                   <img src={p.image} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div className="pc-overlay">
-                    <button className="pc-btn"><FaSearch /></button>
                     <a href={p.link} target="_blank" rel="noopener noreferrer" className="pc-btn" aria-label={`Visit ${p.title}`}>
                       <FaExternalLinkAlt />
                     </a>
                   </div>
                   <span className="pc-badge">{p.cat}</span>
                 </div>
-                <div className="pc-info">
+                <div className="pc-info" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                   <h4>{p.title}</h4>
-                  <p>{p.desc}</p>
+                  <p style={{ flexGrow: 1, margin: 0 }}>{p.desc}</p>
                 </div>
               </div>
             </div>
