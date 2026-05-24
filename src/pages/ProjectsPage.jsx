@@ -9,7 +9,7 @@ import restorantImg from '../assets/images/Restorant.png';
 import ecomImg from '../assets/images/E-commerce.png';
 import medicoCareImg from '../assets/images/MedicoCare.png';
 import solvenImg from '../assets/images/Solven.png';
-import sssBhoomImg from '../assets/images/sssBhoom.png';
+import sssBhoomImg from '../assets/images/sssbhoom.png';
 import caWebsiteImg from '../assets/images/ca-website.png';
 
 const allProjects = [
