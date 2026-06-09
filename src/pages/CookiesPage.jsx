@@ -98,7 +98,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions About Cookies',
-        text: 'If you have any questions about our use of cookies or this Cookie Policy, please contact us at privacy@Asalkar Techworks.com or write to Asalkar Techworks, 123 Business Avenue, Suite 456, Tech City, TC 78901.',
+        text: 'If you have any questions about our use of cookies or this Cookie Policy, please contact us at privacy@asalkartechworks.com or write to Asalkar Techworks Pvt. Ltd., 123 Business Avenue, Suite 456, Tech City, TC 78901.',
       },
     ],
   },
@@ -145,7 +145,7 @@ const CookiesPage = () => (
               transition={{ delay: 0.1 }}
             >
               <p>
-                This Cookie Policy explains how Asalkar Techworks Digital uses cookies and similar
+                This Cookie Policy explains how Asalkar Techworks Pvt. Ltd. uses cookies and similar
                 tracking technologies when you visit our website. It explains what these
                 technologies are, why we use them, and your rights to control our use of them.
               </p>

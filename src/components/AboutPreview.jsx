@@ -26,9 +26,7 @@ const AboutPreview = () => {
                 India's Trusted IT Partner for <span className="gradient-text">Digital Excellence</span>
               </h2>
               <p className="about-desc">
-                Asalkar TechWork is an IT company in India delivering premium websites, powerful
-                e-commerce solutions, and proven SEO strategies. We transform your ideas into
-                digital experiences that captivate, convert, and grow your business.
+                <strong>Asalkar Techwork Private Limited</strong> is a technology-driven company specializing in software development, web applications, mobile applications, cloud solutions, AI-powered systems, and digital transformation services for businesses across various industries.
               </p>
               <ul className="about-checks about-checks--centered">
                 {points.map((p, i) => (

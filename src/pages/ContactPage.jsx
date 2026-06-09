@@ -75,7 +75,7 @@ const ContactPage = () => {
   const info = [
     { icon: <FaMapMarkerAlt />, title: 'Visit Us', lines: ['Vita , Sangli', 'Maharashtra, 415 311'] },
     { icon: <FaPhone />, title: 'Call Us', lines: ['+91 8087818729', '+91 9766761763'] },
-    { icon: <FaEnvelope />, title: 'Email Us', lines: ['hello@Asalkar Techworks.com', 'support@Asalkar Techworks.com'] },
+    { icon: <FaEnvelope />, title: 'Email Us', lines: ['hello@asalkartechworks.com', 'support@asalkartechworks.com'] },
     { 
   icon: <FaClock />, 
   title: 'Hours', 

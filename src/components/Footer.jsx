@@ -52,7 +52,7 @@ const Footer = () => {
               <Link to="/" className="footer-logo">
                 <img 
                   src={logo} 
-                  alt="Asalkar Techworks Logo" 
+                  alt="Asalkar Techwork Private Limited Logo" 
                   height="70" 
                   style={{ objectFit: 'contain' }}
                 />
@@ -61,6 +61,13 @@ const Footer = () => {
                 A full-service digital agency building beautiful, high-performing
                 digital solutions that help businesses grow worldwide.
               </p>
+              <div className="company-info mt-4 mb-4" style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "0.95rem", lineHeight: "1.8" }}>
+                <p className="mb-1"><strong style={{ color: "#fff" }}>Asalkar Techwork Private Limited</strong></p>
+                {/* <p className="mb-1">Registered Company</p> */}
+                <p className="mb-1">Email: asalkartechworks@gmail.com</p>
+                <p className="mb-1">Phone: +91 8087818729</p>
+                <p className="mb-1">Website: www.asalkar.in</p>
+              </div>
               <SocialIcons3D />
             </div>
 
@@ -112,8 +119,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <p>
-                © {new Date().getFullYear()} Asalkar Techworks. Made with{' '}
-                <FaHeart className="heart-beat" /> by Asalkar Techworks
+                © {new Date().getFullYear()} Asalkar Techwork Private Limited. All Rights Reserved.
               </p>
             </div>
             <div className="col-md-6 text-md-end">

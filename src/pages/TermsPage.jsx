@@ -13,7 +13,7 @@ const sections = [
     content: [
       {
         subtitle: 'Agreement to Terms',
-        text: 'By accessing and using the Asalkar Techworks Digital website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.',
+        text: 'By accessing and using the Asalkar Techworks Pvt. Ltd. website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.',
       },
       {
         subtitle: 'Eligibility',
@@ -27,7 +27,7 @@ const sections = [
     content: [
       {
         subtitle: 'Scope of Services',
-        text: 'Asalkar Techworks Digital provides website development, e-commerce solutions, SEO optimization, Google Business management, mobile app development, and UI/UX design services. The specific scope, deliverables, timeline, and pricing for each project are outlined in individual project proposals and contracts.',
+        text: 'Asalkar Techworks Pvt. Ltd. provides website development, e-commerce solutions, SEO optimization, Google Business management, mobile app development, and UI/UX design services. The specific scope, deliverables, timeline, and pricing for each project are outlined in individual project proposals and contracts.',
       },
       {
         subtitle: 'Project Modifications',
@@ -81,7 +81,7 @@ const sections = [
       },
       {
         subtitle: 'Liability Cap',
-        text: 'In no event shall Asalkar Techworks Digital, its directors, employees, partners, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.',
+        text: 'In no event shall Asalkar Techworks Pvt. Ltd., its directors, employees, partners, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.',
       },
     ],
   },
@@ -91,7 +91,7 @@ const sections = [
     content: [
       {
         subtitle: 'Client Indemnification',
-        text: 'You agree to indemnify, defend, and hold harmless Asalkar Techworks Digital and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorney fees) arising from your use of our services, your violation of these Terms, or your violation of any rights of a third party.',
+        text: 'You agree to indemnify, defend, and hold harmless Asalkar Techworks Pvt. Ltd. and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorney fees) arising from your use of our services, your violation of these Terms, or your violation of any rights of a third party.',
       },
     ],
   },
@@ -115,7 +115,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions About These Terms',
-        text: 'If you have any questions about these Terms of Service, please contact us at legal@Asalkar Techworks.com or write to us at Asalkar Techworks Digital, 123 Business Avenue, Suite 456, Tech City, TC 78901. We aim to respond to all inquiries within 5 business days.',
+        text: 'If you have any questions about these Terms of Service, please contact us at legal@asalkartechworks.com or write to us at Asalkar Techworks Pvt. Ltd., 123 Business Avenue, Suite 456, Tech City, TC 78901. We aim to respond to all inquiries within 5 business days.',
       },
     ],
   },
@@ -155,10 +155,10 @@ const TermsPage = () => (
               transition={{ delay: 0.1 }}
             >
               <p>
-                Welcome to Asalkar Techworks Digital. These Terms of Service ("Terms") govern your
+                Welcome to Asalkar Techworks Pvt. Ltd. These Terms of Service ("Terms") govern your
                 access to and use of our website, products, and services. Please read these
                 Terms carefully before engaging our services. These Terms constitute a
-                legally binding agreement between you and Asalkar Techworks Digital.
+                legally binding agreement between you and Asalkar Techworks Pvt. Ltd.
               </p>
             </motion.div>
 
