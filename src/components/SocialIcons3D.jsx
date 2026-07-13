@@ -1,6 +1,6 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
-const SocialIcons3D = () => {
+const SocialIcons3D = ({ exclude = [] }) => {
   // TODO: replace '#' with your actual social media profile URLs
   const socials = [
     { icon: <FaFacebookF />, label: 'Facebook', url: 'https://www.facebook.com/share/1CQUtKgJDj/', bg: '#3b5998', bgBefore: '#365492', bgAfter: '#4a69ad' },
@@ -11,7 +11,7 @@ const SocialIcons3D = () => {
 
   return (
     <div className="social-3d-list">
-      {socials.map((s, i) => (
+      {socials.filter((s) => !exclude.includes(s.label)).map((s, i) => (
         <a
           key={i}
           href={s.url}

@@ -49,10 +49,10 @@ const Careers = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    document.title = "Careers | Asalkar Techwork Private Limited";
+    document.title = "Careers | Asalkar Techworks Private Limited";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.content = "Apply for internships and career opportunities at Asalkar Techwork Private Limited. Explore openings in web development, software development, UI/UX design, digital marketing, and technology solutions.";
+      metaDesc.content = "Apply for internships and career opportunities at Asalkar Techworks Private Limited. Explore openings in web development, software development, UI/UX design, digital marketing, and technology solutions.";
     }
   }, []);
 
@@ -148,7 +148,7 @@ const Careers = () => {
             <span className="pb-breadcrumb">
               <a href="/">Home</a> / <span>Careers</span>
             </span>
-            <h1>Build Your Career With Asalkar Techwork Private Limited</h1>
+            <h1>Build Your Career With Asalkar Techworks Private Limited</h1>
             <p>Join our growing team of developers, designers, marketers, and innovators. Gain real-world experience, work on live projects, and build a strong professional future.</p>
             <div className="hero-btns mt-4 justify-content-center">
               <a href="#application-form" className="btn-primary-glow hoverable">Apply for Internship</a>

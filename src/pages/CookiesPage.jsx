@@ -64,7 +64,7 @@ const sections = [
       },
       {
         subtitle: 'How We Use Cookies',
-        text: 'Asalkar Techworks uses cookies and similar technologies (such as web beacons, pixels, and local storage) to recognize you when you visit our website, remember your preferences, understand how you use our site, and improve your overall experience.',
+        text: 'Asalkar Techworks Private Limited uses cookies and similar technologies (such as web beacons, pixels, and local storage) to recognize you when you visit our website, remember your preferences, understand how you use our site, and improve your overall experience.',
       },
     ],
   },
@@ -98,7 +98,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions About Cookies',
-        text: 'If you have any questions about our use of cookies or this Cookie Policy, please contact us at privacy@asalkartechworks.com or write to Asalkar Techworks Pvt. Ltd., 123 Business Avenue, Suite 456, Tech City, TC 78901.',
+        text: 'If you have any questions about our use of cookies or this Cookie Policy, please contact us at asalkartechworks@gmail.com or write to Asalkar Techworks Private Limited at its registered office: 21/1 Gahkul Vasanat, Vivekanand Nagar, Vite, Khanapur, Sangli - 415311, Maharashtra, India. CIN: U62011PN2026PTC256155.',
       },
     ],
   },
@@ -131,9 +131,9 @@ const CookiesPage = () => (
             >
               <FaCookieBite className="lun-icon" />
               <div>
-                <strong>Last Updated:</strong> January 15, 2025
+                <strong>Last Updated:</strong> July 13, 2026
                 <span className="lun-sep">•</span>
-                <strong>Effective Date:</strong> January 15, 2025
+                <strong>Effective Date:</strong> May 26, 2026
               </div>
             </motion.div>
 
@@ -145,7 +145,7 @@ const CookiesPage = () => (
               transition={{ delay: 0.1 }}
             >
               <p>
-                This Cookie Policy explains how Asalkar Techworks Pvt. Ltd. uses cookies and similar
+                This Cookie Policy explains how Asalkar Techworks Private Limited uses cookies and similar
                 tracking technologies when you visit our website. It explains what these
                 technologies are, why we use them, and your rights to control our use of them.
               </p>

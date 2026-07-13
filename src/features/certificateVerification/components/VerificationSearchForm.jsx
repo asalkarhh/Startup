@@ -44,7 +44,7 @@ const VerificationSearchForm = ({
           value={certificateId}
           onChange={(event) => onCertificateIdChange(event.target.value)}
           className="cert-verify-input"
-          placeholder="ATW-2026-X7K29P"
+          placeholder="ATW-INT + [CLG] + [DD] + [No]"
           autoComplete="off"
           spellCheck="false"
           aria-invalid={hasError}

@@ -1,7 +1,9 @@
 const CERTIFICATE_PREFIX = 'ATW';
 const RANDOM_SEGMENT_LENGTH = 6;
 const RANDOM_CHARSET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-const CERTIFICATE_ID_PATTERN = /^ATW-\d{4}-[A-Z0-9]{6}$/;
+const LEGACY_CERTIFICATE_ID_PATTERN = /^ATW-\d{4}-[A-Z0-9]{6}$/;
+const INTERNSHIP_CERTIFICATE_ID_PATTERN =
+  /^ATW-INT-[A-Z]{3}(0[1-9]|[12]\d|3[01])[1-4]\d{1,3}$/;
 
 export const normalizeCertificateId = (value) =>
   String(value || '')
@@ -29,4 +31,6 @@ export const generateCertificateId = (year = new Date().getFullYear()) => {
 };
 
 export const isCertificateIdFormat = (value) =>
-  CERTIFICATE_ID_PATTERN.test(normalizeCertificateId(value));
+  [LEGACY_CERTIFICATE_ID_PATTERN, INTERNSHIP_CERTIFICATE_ID_PATTERN].some(
+    (pattern) => pattern.test(normalizeCertificateId(value))
+  );

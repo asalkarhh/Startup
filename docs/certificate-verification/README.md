@@ -262,7 +262,7 @@ Steps:
 Expected:
 
 - Validation message should appear
-- User should see: `Enter a valid ID like ATW-2026-X7K29P.`
+- User should see: `Use format: ATW-INT + [CLG] + [DD] + [No].`
 
 ### 4. Valid certificate test
 

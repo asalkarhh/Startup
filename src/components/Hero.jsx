@@ -35,7 +35,7 @@ const Hero = () => {
 
               <p className="hero-sub" data-aos="fade-up" data-aos-delay="500">
                 From affordable website development to advanced SEO and e-commerce —
-                Asalkar TechWork helps Indian businesses build powerful online
+                Asalkar Techworks helps Indian businesses build powerful online
                 presences that turn visitors into paying clients.
               </p>
 

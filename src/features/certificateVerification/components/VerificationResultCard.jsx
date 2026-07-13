@@ -66,7 +66,7 @@ const VerificationResultCard = ({
         </div>
         <h3>Invalid Certificate</h3>
         <p>
-          This certificate was not issued by Asalkar Techworks Pvt. Ltd.
+          This certificate was not issued by Asalkar Techworks Private Limited.
         </p>
       </div>
     );
@@ -121,7 +121,7 @@ const VerificationResultCard = ({
             <h3>Certificate Verified</h3>
             <p>
               This certificate matches the official record issued by Asalkar
-              Techworks Pvt. Ltd.
+              Techworks Private Limited
             </p>
           </div>
         </div>
@@ -171,10 +171,12 @@ const VerificationResultCard = ({
         ))}
       </div>
 
-      <div className="cert-verify-url-preview">
-        <span>QR verification URL</span>
-        <code>{qrPreviewUrl}</code>
-      </div>
+      {qrPreviewUrl && (
+        <div className="cert-verify-url-preview">
+          <span>QR verification URL</span>
+          <code>{qrPreviewUrl}</code>
+        </div>
+      )}
     </div>
   );
 };

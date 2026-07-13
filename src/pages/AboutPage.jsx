@@ -254,7 +254,7 @@ const AboutPage = () => (
               From Vision to <span className="gradient-text">Reality</span>
             </h2>
             <p className="body-text mb-3">
-              Asalkar Techworks Pvt. Ltd. was founded by a team of passionate
+              Asalkar Techworks Private Limited was founded by a team of passionate
               developers and designers who believe that premium digital experiences
               shouldn't be reserved only for Fortune 500 companies.
             </p>

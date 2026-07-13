@@ -92,7 +92,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions About This Policy',
-        text: 'If you have any questions about this Privacy Policy, your personal data, or would like to exercise any of your data protection rights, please contact us at privacy@asalkartechworks.com or call us at +1 (555) 123-4567. Our Data Protection Officer will respond within 30 business days.',
+        text: 'If you have any questions about this Privacy Policy, your personal data, or would like to exercise any of your data protection rights, please contact Saurabh Asalkar at asalkartechworks@gmail.com or call +91 8087818729. You may also write to Asalkar Techworks Private Limited at its registered office: 21/1 Gahkul Vasanat, Vivekanand Nagar, Vite, Khanapur, Sangli - 415311, Maharashtra, India. CIN: U62011PN2026PTC256155.',
       },
     ],
   },
@@ -120,9 +120,9 @@ const PrivacyPage = () => (
             >
               <FaShieldAlt className="lun-icon" />
               <div>
-                <strong>Last Updated:</strong> January 15, 2025
+                <strong>Last Updated:</strong> July 13, 2026
                 <span className="lun-sep">•</span>
-                <strong>Effective Date:</strong> January 15, 2025
+                <strong>Effective Date:</strong> May 26, 2026
               </div>
             </motion.div>
 
@@ -135,7 +135,7 @@ const PrivacyPage = () => (
               transition={{ delay: 0.1, duration: 0.5 }}
             >
               <p>
-                At Asalkar Techworks Pvt. Ltd. ("we," "us," or "our"), we are committed to protecting
+                At Asalkar Techworks Private Limited ("we," "us," or "our"), we are committed to protecting
                 your privacy and ensuring the security of your personal information. This
                 Privacy Policy explains how we collect, use, disclose, and safeguard your
                 information when you visit our website or use our services.

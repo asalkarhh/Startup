@@ -181,7 +181,7 @@ const ContactPage = () => {
 
               <div className="contact-social-3d" data-aos="fade-up" data-aos-delay="500">
                 <h5>Connect With Us</h5>
-                <SocialIcons3D />
+                <SocialIcons3D exclude={['Twitter', 'LinkedIn']} />
               </div>
             </div>
           </div>

@@ -16,6 +16,7 @@ import Careers from './pages/Careers';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import CookiesPage from './pages/CookiesPage';
+import CorporateInformationPage from './pages/CorporateInformationPage';
 import { CertificateVerificationPage } from './features/certificateVerification';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -63,6 +64,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/cookies" element={<CookiesPage />} />
+          <Route path="/corporate-information" element={<CorporateInformationPage />} />
           <Route path="/verify" element={<CertificateVerificationPage />} />
         </Routes>
       </main>

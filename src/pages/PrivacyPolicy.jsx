@@ -21,11 +21,11 @@ const PrivacyPolicy = () => {
           <div className="row justify-content-center">
             <div className="col-lg-10" style={{ color: 'var(--text)', lineHeight: '1.8' }}>
               <h2>1. Information We Collect</h2>
-              <p>Asalkar Techwork Private Limited ("we", "us", or "our") operates this website. We collect information to provide better services to all our users, including basic personal information when you contact us.</p>
+              <p>Asalkar Techworks Private Limited ("we", "us", or "our") operates this website. We collect information to provide better services to all our users, including basic personal information when you contact us.</p>
               <h2 className="mt-4">2. How We Use Information</h2>
               <p>We use the information we collect to operate, maintain, and improve our services, as well as to communicate with you about your projects and our offerings.</p>
               <h2 className="mt-4">3. Data Security</h2>
-              <p>We restrict access to your personal information to Asalkar Techwork Private Limited employees and contractors who need that information to operate, develop, or improve our services.</p>
+              <p>We restrict access to your personal information to Asalkar Techworks Private Limited employees and contractors who need that information to operate, develop, or improve our services.</p>
               <h2 className="mt-4">4. Contact Us</h2>
               <p>If you have any questions about this Privacy Policy, please contact us at asalkartechworks@gmail.com.</p>
             </div>

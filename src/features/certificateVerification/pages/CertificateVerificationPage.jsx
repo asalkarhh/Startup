@@ -41,9 +41,9 @@ const CertificateVerificationPage = () => {
   const autoVerifiedIdRef = useRef('');
 
   const queryCertificateId = searchParams.get('id') || '';
-  const qrPreviewUrl = buildCertificateVerificationUrl(
-    certificateId || 'ATW-2026-X7K29P'
-  );
+  const qrPreviewUrl = certificateId
+    ? buildCertificateVerificationUrl(certificateId)
+    : '';
 
   const handleCertificateIdChange = (value) => {
     if (requestState === 'loading') {
@@ -69,7 +69,7 @@ const CertificateVerificationPage = () => {
     }
 
     if (!isCertificateIdFormat(normalizedId)) {
-      setFormError('Enter a valid ID like ATW-2026-X7K29P.');
+      setFormError('Use format: ATW-INT + [CLG] + [DD] + [No].');
       setResult(null);
       setRequestState('idle');
       return;
@@ -136,7 +136,7 @@ const CertificateVerificationPage = () => {
     <>
       <PageBanner
         title="Certificate Verification"
-        subtitle="Verify internship certificates issued by Asalkar Techworks Pvt. Ltd."
+        subtitle="Verify internship certificates issued by Asalkar Techworks Private Limited"
         breadcrumb="Verify"
       />
 
@@ -150,7 +150,7 @@ const CertificateVerificationPage = () => {
                 <p>
                   Use the certificate ID or QR link to confirm whether an
                   internship certificate was officially issued by Asalkar
-                  Techworks Pvt. Ltd.
+                  Techworks Private Limited
                 </p>
 
                 <div className="cert-verify-trust-grid">
@@ -173,7 +173,7 @@ const CertificateVerificationPage = () => {
                   certificateId={certificateId}
                   helperText={
                     formError ||
-                    'Supports direct links like /verify?id=ATW-2026-X7K29P.'
+                    'Format: ATW-INT + [CLG] + [DD] + [No].'
                   }
                   hasError={Boolean(formError)}
                   isLoading={requestState === 'loading'}

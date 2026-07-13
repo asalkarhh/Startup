@@ -26,7 +26,7 @@ const AboutPreview = () => {
                 India's Trusted IT Partner for <span className="gradient-text">Digital Excellence</span>
               </h2>
               <p className="about-desc">
-                <strong>Asalkar Techwork Private Limited</strong> is a technology-driven company specializing in software development, web applications, mobile applications, cloud solutions, AI-powered systems, and digital transformation services for businesses across various industries.
+                <strong>Asalkar Techworks Private Limited</strong> is an Indian private limited company incorporated on 26 May 2026, specializing in software development, web applications, mobile applications, cloud solutions, AI-powered systems, and digital transformation services for businesses across various industries.
               </p>
               <ul className="about-checks about-checks--centered">
                 {points.map((p, i) => (
