@@ -766,6 +766,50 @@ img { max-width:100%; }
 }
 
 /* ─── STATS ─── */
+.products-showcase-section { background:var(--bg-alt); }
+.product-showcase-card { display:block; height:100%; overflow:hidden; text-decoration:none; color:inherit; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-m); transition:all .4s var(--ease); }
+.product-showcase-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-xl); color:inherit; }
+.product-showcase-visual { height:210px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:72px; }
+.product-showcase-visual img { width:100%; height:100%; object-fit:cover; }
+.product-showcase-content { padding:28px; }
+.product-showcase-content > span { color:var(--accent); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+.product-showcase-content h3 { margin:8px 0 10px; font-size:24px; }
+.product-showcase-content p { color:var(--text-2); font-size:14px; line-height:1.75; }
+.product-showcase-content strong { display:inline-flex; align-items:center; gap:9px; margin-top:8px; color:var(--accent); font-size:13px; }
+.product-detail-section { background:var(--bg); }
+.product-back-link { display:inline-flex; align-items:center; gap:8px; margin-bottom:24px; color:var(--accent); font-weight:600; text-decoration:none; }
+.product-detail-hero { display:grid; grid-template-columns:150px 1fr; align-items:center; gap:34px; padding:48px; border-radius:24px; color:#fff; }
+.product-detail-icon { width:130px; height:130px; display:flex; align-items:center; justify-content:center; border-radius:28px; background:rgba(255,255,255,.16); font-size:62px; }
+.product-detail-icon.product-detail-image { overflow:hidden; background:#fff; }
+.product-detail-icon.product-detail-image img { width:100%; height:100%; object-fit:cover; }
+.product-detail-hero span { font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; opacity:.85; }
+.product-detail-hero h2 { margin:8px 0 10px; color:#fff; font-size:38px; }
+.product-detail-hero p { max-width:760px; margin:0; color:rgba(255,255,255,.88); line-height:1.8; }
+.product-content-card { height:100%; padding:32px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-m); }
+.product-content-card h3 { margin:10px 0 14px; font-size:23px; }
+.product-content-card > p { color:var(--text-2); line-height:1.9; }
+.product-chip-list { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.product-chip-list span { padding:8px 13px; border-radius:50px; background:rgba(255,107,53,.09); color:var(--accent); font-size:12px; font-weight:600; }
+.product-benefit-list { display:grid; gap:14px; margin-top:22px; }
+.product-benefit-list div { display:flex; align-items:flex-start; gap:11px; color:var(--text-2); }
+.product-benefit-list svg { flex:0 0 auto; margin-top:4px; color:#28a745; }
+.product-step-list { display:grid; gap:16px; margin-top:22px; }
+.product-step-list div { display:grid; grid-template-columns:38px 1fr; align-items:start; gap:12px; }
+.product-step-list strong { width:34px; height:34px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--grad-accent); color:#fff; }
+.product-step-list p { margin:5px 0 0; color:var(--text-2); font-size:13px; line-height:1.6; }
+.product-detail-cta { display:flex; align-items:center; justify-content:space-between; gap:25px; margin-top:40px; padding:34px; border-radius:var(--radius); background:var(--grad-primary); color:#fff; }
+.product-detail-cta span { color:var(--accent); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+.product-detail-cta h3 { margin:7px 0 0; color:#fff; font-size:23px; }
+.product-detail-actions { display:flex; flex-wrap:nowrap; justify-content:flex-end; gap:12px; }
+.product-detail-actions a { white-space:nowrap; }
+@media (max-width:768px) {
+  .product-detail-hero { grid-template-columns:1fr; padding:30px; }
+  .product-detail-icon { width:95px; height:95px; font-size:46px; }
+  .product-detail-hero h2 { font-size:30px; }
+  .product-detail-cta { align-items:flex-start; flex-direction:column; }
+  .product-detail-actions { justify-content:flex-start; }
+}
+
 .stats-section { background:var(--grad-primary); position:relative; }
 [data-theme="dark"] .stats-section { background:linear-gradient(135deg,#080E1A,#0D1526); }
 
