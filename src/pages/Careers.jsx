@@ -165,6 +165,13 @@ const Careers = () => {
             <span className="section-label">Open Positions</span>
             <h2 className="section-heading">Internship <span className="gradient-text">Opportunities</span></h2>
           </div>
+          <div className="careers-vacancy-notice" role="status" data-aos="fade-up">
+            <div className="careers-vacancy-notice-icon" aria-hidden="true">i</div>
+            <div>
+              <h3>Applications Open for Future Opportunities</h3>
+              <p>Our current vacancies are filled, but you can still submit your application. We’ll keep your profile on file and contact you when a suitable opportunity becomes available.</p>
+            </div>
+          </div>
           <div className="row g-4">
             {internshipPositions.map((job, idx) => (
               <div className="col-lg-6" key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
