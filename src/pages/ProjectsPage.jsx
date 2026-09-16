@@ -13,6 +13,9 @@ import medicoCareImg from '../assets/images/MedicoCare.png';
 import solvenImg from '../assets/images/Solven.png';
 import sssBhoomImg from '../assets/images/sssbhoom.png';
 import scaleAlphaImg from '../assets/images/scalealpha.jpeg';
+import goldShopImg from '../assets/images/gold_shop.png';
+import fashTrendImg from '../assets/images/fashtrend.png';
+import alignaaImg from '../assets/images/alignaa.jpeg';
 
 const allProjects = [
   {
@@ -27,6 +30,28 @@ const allProjects = [
     tech: ['SEO', 'Next.js', 'Tailwind'],
   },
   {
+    title: 'FashTrend Custom',
+    cat: 'E-Commerce',
+    type: 'Client Project',
+    industry: 'Apparel & Fashion',
+    desc: 'An e-commerce platform for custom T-shirts and personalized apparel offering bulk ordering and customized printing.',
+    outcome: 'Streamlined online storefront with easy product discovery and custom ordering flow',
+    image: fashTrendImg,
+    link: 'https://fashtrendcustom.in/',
+    tech: ['React', 'E-Commerce', 'Responsive UI'],
+  },
+  {
+    title: 'Alignaa Clear Aligners',
+    cat: 'Website',
+    type: 'Client Project',
+    industry: 'Healthcare & Dental',
+    desc: 'A professional platform for clear aligners focused on dental professionals, showcasing clinical expertise and digital orthodontic solutions.',
+    outcome: 'Modern digital presence that establishes trust and connects with dental professionals',
+    image: alignaaImg,
+    link: 'https://www.alignaa.in/',
+    tech: ['React', 'SEO', 'Responsive UI'],
+  },
+  {
     title: 'Elite Academy',
     cat: 'Website',
     type: 'Demo Showcase',
@@ -38,19 +63,19 @@ const allProjects = [
     tech: ['React', 'Node.js', 'MongoDB'],
   },
   {
-    title: 'MK Fitness',
-    cat: 'Website',
+    title: 'Gym Management System',
+    cat: 'Web App',
     type: 'Client Project',
     industry: 'Fitness',
-    desc: 'A premium fitness website for showcasing personal training, group classes, strength training, and gym locations.',
-    outcome: 'Live gym website with program discovery, branch details, and quick inquiry flow',
+    desc: 'An all-in-one gym management platform designed to streamline member registrations, subscription tracking, and class scheduling.',
+    outcome: 'Integrated fitness portal with seamless class discovery, membership management, and administrative controls',
     image: gymImg,
-    link: 'https://www.mkfitness.in/',
+    link: 'https://vita-fitness-demo-9o4n.vercel.app/',
     tech: ['React', 'SEO', 'Responsive UI'],
   },
   {
     title: 'Shri SSS Sanstha',
-    cat: 'Website',
+    cat: 'SEO',
     type: 'Client Project',
     industry: 'NGO',
     desc: 'A nonprofit website for a Maharashtra-based NGO focused on education, healthcare, social welfare, disaster relief, and volunteer service.',
@@ -60,8 +85,19 @@ const allProjects = [
     tech: ['React', 'SEO', 'Responsive UI'],
   },
   {
+    title: 'HEMAIRA HAUTE JOAILLERIE',
+    cat: 'SEO',
+    type: 'Demo Showcase',
+    industry: 'Jewelry & Luxury',
+    desc: 'High-end Indian luxury gold and diamond jewelry E-Commerce platform crafted for bespoke royal Kundan, Polki, Solitaires and Temple creations.',
+    outcome: 'Premium shopping experience with elegant product discovery and inquiry flow',
+    image: goldShopImg,
+    link: 'https://gold-shop-demo-murex.vercel.app/',
+    tech: ['React', 'Tailwind', 'E-Commerce'],
+  },
+  {
     title: 'Estate Elite',
-    cat: 'Website',
+    cat: 'Web App',
     type: 'Demo Showcase',
     industry: 'Real Estate',
     desc: 'A premium property listing experience designed for faster browsing, inquiry capture, and visual storytelling.',
@@ -134,7 +170,7 @@ const allProjects = [
   },
   {
     title: 'MedicoCare Delivery',
-    cat: 'Website',
+    cat: 'Web App',
     type: 'Demo Showcase',
     industry: 'Healthcare',
     desc: 'A healthcare delivery website concept for pharmacy, supplies, trust-building content, and quick inquiries.',
