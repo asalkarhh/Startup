@@ -3,7 +3,7 @@ const RANDOM_SEGMENT_LENGTH = 6;
 const RANDOM_CHARSET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const LEGACY_CERTIFICATE_ID_PATTERN = /^ATW-\d{4}-[A-Z0-9]{6}$/;
 const INTERNSHIP_CERTIFICATE_ID_PATTERN =
-  /^ATW-INT-[A-Z]{3}(0[1-9]|[12]\d|3[01])[1-4]\d{1,3}$/;
+  /^ATW-INT-[A-Z]{2,3}(0[1-9]|[12]\d|3[01])\d{2,4}$/;
 
 export const normalizeCertificateId = (value) =>
   String(value || '')
