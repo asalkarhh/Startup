@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
-import { FaArrowRight, FaExternalLinkAlt, FaFileInvoiceDollar, FaRocket, FaSms } from 'react-icons/fa';
+import { FaArrowRight, FaBoxes, FaDumbbell, FaExternalLinkAlt, FaFileInvoiceDollar, FaRocket, FaSms } from 'react-icons/fa';
 import { productList } from '../data/products';
 import coachingImg from '../assets/images/Academy.png';
 import gymImg from '../assets/images/Gym.png';
@@ -16,6 +16,10 @@ import scaleAlphaImg from '../assets/images/scalealpha.jpeg';
 import goldShopImg from '../assets/images/gold_shop.png';
 import fashTrendImg from '../assets/images/fashtrend.png';
 import alignaaImg from '../assets/images/alignaa.jpeg';
+import kshitijaImg from '../assets/images/Kshitija.png';
+import daddySodaImg from "../assets/images/daddy'ssoda.png";
+import matoshreeImg from '../assets/images/hotelmatoshree.png';
+import inventoryImage from '../assets/images/inventorymanagement.png';
 import vitaGoldenCityImg from '../assets/images/vitagoldencity.jpeg';
 
 const allProjects = [
@@ -42,6 +46,17 @@ const allProjects = [
     tech: ['React', 'SEO', 'Responsive UI'],
   },
   {
+    title: "Kshitija's Creations",
+    cat: 'E-Commerce',
+    type: 'Client Project',
+    industry: 'Handmade Jewelry & Keepsakes',
+    desc: 'An artisanal e-commerce storefront showcasing handcrafted jewellery, festive keepsakes, decorative Diwali pantis, and customized gifts with WhatsApp ordering and pan-India delivery.',
+    outcome: 'Artisanal digital storefront with smooth catalog browsing and direct WhatsApp order conversions',
+    image: kshitijaImg,
+    link: 'https://kshitijascreations.tech/',
+    tech: ['React', 'Tailwind', 'E-Commerce', 'Responsive UI'],
+  },
+  {
     title: 'HEMAIRA HAUTE JOAILLERIE',
     cat: 'SEO',
     type: 'Demo Showcase',
@@ -51,6 +66,17 @@ const allProjects = [
     image: goldShopImg,
     link: 'https://gold-shop-demo-murex.vercel.app/',
     tech: ['React', 'Tailwind', 'E-Commerce'],
+  },
+  {
+    title: "Daddy Soda House",
+    cat: 'Web App',
+    type: 'Client Project',
+    industry: 'Food & Beverage',
+    desc: 'A franchise portal and IoT-enabled management platform for turnkey draft soda and ice-gola outlets, backed by the 50+ year legacy of Himmat Beverages (Est. 1973).',
+    outcome: 'Turnkey franchise platform with real-time IoT dispenser monitoring, outlet sales tracking, and pan-India franchise acquisition',
+    image: daddySodaImg,
+    link: 'https://daddysodahouse.com/',
+    tech: ['React', 'Tailwind', 'IoT Dashboard', 'Web App'],
   },
   {
     title: 'Vita Golden City Official',
@@ -64,6 +90,17 @@ const allProjects = [
     tech: ['SEO', 'React', 'Tailwind'],
   },
   {
+    title: 'Hotel Matoshree Dharashiv',
+    cat: 'Website',
+    type: 'Client Project',
+    industry: 'Restaurant & Hospitality',
+    desc: "A modern restaurant website and local digital presence for Dharashiv's renowned dining destination founded by Prof. Manoj Surwase, famous for authentic Maharashtrian cuisine, special Biryani, and Dhavara Special.",
+    outcome: 'High-visibility local SEO with rich restaurant schema, Google Maps integration, and seamless digital menu discovery',
+    image: matoshreeImg,
+    link: 'https://www.hotelmatoshree.in/',
+    tech: ['React', 'SEO', 'Tailwind', 'Responsive UI'],
+  },
+  {
     title: 'Solven Company Profile',
     cat: 'SEO',
     type: 'Client Project',
@@ -73,17 +110,6 @@ const allProjects = [
     image: solvenImg,
     link: 'https://solven.in/',
     tech: ['SEO', 'Next.js', 'Tailwind'],
-  },
-  {
-    title: 'Gym Management System',
-    cat: 'Web App',
-    type: 'Client Project',
-    industry: 'Fitness',
-    desc: 'An all-in-one gym management platform designed to streamline member registrations, subscription tracking, and class scheduling.',
-    outcome: 'Integrated fitness portal with seamless class discovery, membership management, and administrative controls',
-    image: gymImg,
-    link: 'https://vita-fitness-demo-9o4n.vercel.app/',
-    tech: ['React', 'SEO', 'Responsive UI'],
   },
   {
     title: 'Scale Alpha',
@@ -189,6 +215,40 @@ const allProjects = [
       { label: 'Request Smart Billing', url: 'https://docs.google.com/forms/d/e/1FAIpQLScS30_VZgHCBrvFnvHGfX01aRoPIbmRI8HB6ZBHmVWwQ3mB7A/viewform' },
     ],
     tech: ['Digital Invoicing', 'UPI QR', 'WhatsApp'],
+  },
+  {
+    title: 'Smart Inventory System',
+    cat: 'Our Products',
+    type: 'Asalkar Techworks Product',
+    industry: 'Inventory & Operations',
+    desc: 'A cloud-based stock and inventory management platform that tracks real-time item consumption, manages multi-outlet supplies, prevents stockouts, and simplifies purchase orders.',
+    outcome: 'Complete visibility into stock levels, consumption metrics, automated low-stock alerts, and multi-location dispatch control',
+    gradient: 'linear-gradient(135deg, #0d9488 0%, #059669 48%, #10b981 100%)',
+    icon: <FaBoxes />,
+    image: inventoryImage,
+    link: 'https://daddysodahouse.com/login',
+    actions: [
+      { label: 'Login to Portal', url: 'https://daddysodahouse.com/login' },
+      { label: 'Request Demo', url: 'https://docs.google.com/forms/d/e/1FAIpQLScS30_VZgHCBrvFnvHGfX01aRoPIbmRI8HB6ZBHmVWwQ3mB7A/viewform' },
+    ],
+    tech: ['Inventory Control', 'Multi-Outlet', 'Stock Analytics'],
+  },
+  {
+    title: 'Gym Management System',
+    cat: 'Our Products',
+    type: 'Asalkar Techworks Product',
+    industry: 'Fitness & Wellness',
+    desc: 'An all-in-one gym and fitness center management platform designed to streamline member registrations, subscription renewals, trainer allocation, and class scheduling.',
+    outcome: 'Integrated fitness portal with automated subscription reminders, attendance tracking, and administrative controls',
+    gradient: 'linear-gradient(135deg, #b91c1c 0%, #e11d48 48%, #f43f5e 100%)',
+    icon: <FaDumbbell />,
+    image: gymImg,
+    link: 'https://vita-fitness-demo-9o4n.vercel.app/',
+    actions: [
+      { label: 'View Live Demo', url: 'https://vita-fitness-demo-9o4n.vercel.app/' },
+      { label: 'Request Demo', url: 'https://docs.google.com/forms/d/e/1FAIpQLScS30_VZgHCBrvFnvHGfX01aRoPIbmRI8HB6ZBHmVWwQ3mB7A/viewform' },
+    ],
+    tech: ['Membership Portal', 'Class Scheduling', 'Renewal Reminders'],
   }
 ];
 
@@ -292,9 +352,9 @@ const ProjectsPage = () => {
 
           <div className="row g-4 mt-4 justify-content-center">
             {productList.map((product, index) => {
-              const ProductIcon = product.icon === 'sms' ? FaSms : FaFileInvoiceDollar;
+              const ProductIcon = product.icon === 'sms' ? FaSms : product.icon === 'inventory' ? FaBoxes : product.icon === 'gym' ? FaDumbbell : FaFileInvoiceDollar;
               return (
-                <div className="col-lg-5 col-md-6" key={product.slug} data-aos="fade-up" data-aos-delay={index * 100}>
+                <div className="col-lg-6 col-md-6" key={product.slug} data-aos="fade-up" data-aos-delay={index * 100}>
                   <Link to={`/products/${product.slug}`} className="product-showcase-card hoverable">
                     <div className="product-showcase-visual" style={{ background: product.theme }}>
                       {product.image ? <img src={product.image} alt={product.title} /> : <ProductIcon />}

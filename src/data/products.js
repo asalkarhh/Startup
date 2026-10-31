@@ -1,5 +1,7 @@
 import smartSmsImage from '../assets/images/smartsms.jpeg';
 import smartBillingImage from '../assets/images/smartbillingsystem.jpeg';
+import inventoryImage from '../assets/images/inventorymanagement.png';
+import gymImage from '../assets/images/Gym.png';
 
 export const products = {
   'smart-sms': {
@@ -60,6 +62,88 @@ export const products = {
     theme: 'linear-gradient(135deg, #4c1d95 0%, #7c3aed 48%, #c026d3 100%)',
     icon: 'billing',
     image: smartBillingImage,
+  },
+  'smart-inventory': {
+    slug: 'smart-inventory',
+    title: 'Smart Inventory System',
+    ctaTitle: 'Smart Inventory',
+    tagline: 'Real-time stock tracking, automated alerts, and seamless outlet control.',
+    category: 'Inventory & Operations',
+    summary: 'A centralized inventory and stock management system that tracks item consumption, manages multi-outlet supplies, prevents stockouts, and simplifies reordering in real time.',
+    description: 'Smart Inventory System is a cloud-based stock and inventory management platform designed for growing businesses, retail chains, and multi-location enterprises. It replaces manual registers and guesswork with live tracking of stock movements, automated threshold alerts, inward-outward logs, and real-time usage analytics to keep supply chain operations efficient and cost-effective.',
+    benefits: [
+      'Real-time tracking of current stock levels across all outlets and warehouses',
+      'Automated low-stock and reorder threshold alerts to prevent stockouts',
+      'Detailed inward, outward, and consumption logs with zero manual errors',
+      'Centralized dashboard for multi-location inventory and dispatch control',
+      'Seamless purchase order creation, vendor tracking, and invoice matching',
+      'Accurate usage analytics to eliminate shrinkage and optimize holding costs',
+      'Role-based secure access for administrators, store managers, and staff',
+      'Easy integration with digital billing and POS workflows',
+    ],
+    steps: [
+      'Set up inventory categories, items, units of measurement, and reorder levels.',
+      'Record inward shipments, purchase receipts, and supplier details.',
+      'Track real-time stock deductions through daily sales, dispatches, or automated usage.',
+      'Monitor live stock analytics, generate reorder reports, and optimize purchasing decisions.',
+    ],
+    idealFor: [
+      'Retail chains',
+      'Wholesale distributors',
+      'Multi-outlet businesses',
+      'Franchise networks',
+      'Manufacturing units',
+      'FMCG & Supply businesses',
+      'Supermarkets & Kirana stores',
+      'Warehouse operators',
+    ],
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScS30_VZgHCBrvFnvHGfX01aRoPIbmRI8HB6ZBHmVWwQ3mB7A/viewform',
+    websiteUrl: 'https://daddysodahouse.com/login',
+    websiteLabel: 'Login to Portal',
+    theme: 'linear-gradient(135deg, #0d9488 0%, #059669 48%, #10b981 100%)',
+    icon: 'inventory',
+    image: inventoryImage,
+  },
+  'gym-management': {
+    slug: 'gym-management',
+    title: 'Gym Management System',
+    ctaTitle: 'Gym Management',
+    tagline: 'Streamline member registrations, renewals, schedules, and attendance.',
+    category: 'Fitness & Wellness',
+    summary: 'An all-in-one gym and fitness center management platform to handle member registrations, subscription renewals, trainer allocation, and class scheduling.',
+    description: 'Gym Management System is a comprehensive digital operating platform built for gyms, fitness clubs, and wellness studios. It replaces spreadsheet disorder with automated member profiles, subscription renewal tracking, trainer scheduling, class bookings, attendance records, and revenue analytics—all from a sleek, mobile-friendly interface.',
+    benefits: [
+      'Instant member onboarding with digital profiles and customized membership plans',
+      'Automated subscription renewal tracking and reminder notifications',
+      'Class scheduling, timetable publishing, and trainer assignment management',
+      'Digital attendance logging and check-in history for gym members',
+      'Payment tracking with instant digital receipts and renewal cashflow visibility',
+      'Visual performance dashboards tracking active members, churn, and revenue',
+      'Role-based access for gym owners, front-desk staff, and personal trainers',
+      'Mobile-optimized experience for management on any phone, tablet, or PC',
+    ],
+    steps: [
+      'Set up gym membership plans, class timetables, and trainer profiles.',
+      'Register members with digital profiles and assign active subscriptions.',
+      'Track daily attendance, class bookings, and renewal dates effortlessly.',
+      'Monitor member retention, financial reports, and overall facility growth.',
+    ],
+    idealFor: [
+      'Gyms & Fitness Centers',
+      'Yoga & Pilates Studios',
+      'CrossFit Boxes',
+      'Martial Arts Dojos',
+      'Dance & Aerobics Academies',
+      'Personal Trainers',
+      'Sports & Recreation Clubs',
+      'Wellness Centers',
+    ],
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScS30_VZgHCBrvFnvHGfX01aRoPIbmRI8HB6ZBHmVWwQ3mB7A/viewform',
+    websiteUrl: 'https://vita-fitness-demo-9o4n.vercel.app/',
+    websiteLabel: 'View Live Demo',
+    theme: 'linear-gradient(135deg, #b91c1c 0%, #e11d48 48%, #f43f5e 100%)',
+    icon: 'gym',
+    image: gymImage,
   },
 };
 

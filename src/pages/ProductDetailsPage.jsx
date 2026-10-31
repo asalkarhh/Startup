@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { FaArrowLeft, FaCheckCircle, FaExternalLinkAlt, FaFileInvoiceDollar, FaSms } from 'react-icons/fa';
+import { FaArrowLeft, FaBoxes, FaCheckCircle, FaDumbbell, FaExternalLinkAlt, FaFileInvoiceDollar, FaSms } from 'react-icons/fa';
 import PageBanner from '../components/PageBanner';
 import { products } from '../data/products';
 
@@ -10,7 +10,7 @@ const ProductDetailsPage = () => {
 
   if (!product) return <Navigate to="/projects" replace />;
 
-  const ProductIcon = product.icon === 'sms' ? FaSms : FaFileInvoiceDollar;
+  const ProductIcon = product.icon === 'sms' ? FaSms : product.icon === 'inventory' ? FaBoxes : product.icon === 'gym' ? FaDumbbell : FaFileInvoiceDollar;
 
   return (
     <>
@@ -73,7 +73,7 @@ const ProductDetailsPage = () => {
           <div className="product-detail-cta" data-aos="fade-up">
             <div><span>Interested in {product.title}?</span><h3>Fill out the form and our team will contact you.</h3></div>
             <div className="product-detail-actions">
-              {product.websiteUrl && <a href={product.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-hero">Visit Website <FaExternalLinkAlt /></a>}
+              {product.websiteUrl && <a href={product.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-hero">{product.websiteLabel || "Visit Website"} <FaExternalLinkAlt /></a>}
               <a href={product.formUrl} target="_blank" rel="noopener noreferrer" className="btn-primary-glow">Get {product.ctaTitle || product.title} <FaExternalLinkAlt /></a>
             </div>
           </div>
