@@ -16,6 +16,7 @@ import scaleAlphaImg from '../assets/images/scalealpha.jpeg';
 import goldShopImg from '../assets/images/gold_shop.png';
 import fashTrendImg from '../assets/images/fashtrend.png';
 import alignaaImg from '../assets/images/alignaa.jpeg';
+import alignaaCoImg from '../assets/images/alignaaco.png';
 import kshitijaImg from '../assets/images/Kshitija.png';
 import daddySodaImg from "../assets/images/daddy'ssoda.png";
 import matoshreeImg from '../assets/images/hotelmatoshree.png';
@@ -36,7 +37,8 @@ const allProjects = [
   },
   {
     title: 'Alignaa Clear Aligners',
-    cat: 'Website',
+    cat: 'Healthcare & Pharma',
+    extraCats: ['Website'],
     type: 'Client Project',
     industry: 'Healthcare & Dental',
     desc: 'A professional platform for clear aligners focused on dental professionals, showcasing clinical expertise and digital orthodontic solutions.',
@@ -44,6 +46,18 @@ const allProjects = [
     image: alignaaImg,
     link: 'https://www.alignaa.in/',
     tech: ['React', 'SEO', 'Responsive UI'],
+  },
+  {
+    title: 'Alignaa.co',
+    cat: 'Healthcare & Pharma',
+    extraCats: ['Website'],
+    type: 'Client Project',
+    industry: 'Healthcare & Dental',
+    desc: "India's premier doctor-directed clear aligner consumer platform offering affordable, clinic-supervised teeth straightening with 3D digital scans, transparent pricing, and treatment tracking.",
+    outcome: 'High-conversion D2C patient portal with 3D smile assessment, tiered pricing models, and clinic partner discovery',
+    image: alignaaCoImg,
+    link: 'https://www.alignaa.co/',
+    tech: ['React', 'SEO', 'Tailwind', 'Responsive UI'],
   },
   {
     title: "Kshitija's Creations",
@@ -57,17 +71,6 @@ const allProjects = [
     tech: ['React', 'Tailwind', 'E-Commerce', 'Responsive UI'],
   },
   {
-    title: 'HEMAIRA HAUTE JOAILLERIE',
-    cat: 'SEO',
-    type: 'Demo Showcase',
-    industry: 'Jewelry & Luxury',
-    desc: 'High-end Indian luxury gold and diamond jewelry E-Commerce platform crafted for bespoke royal Kundan, Polki, Solitaires and Temple creations.',
-    outcome: 'Premium shopping experience with elegant product discovery and inquiry flow',
-    image: goldShopImg,
-    link: 'https://gold-shop-demo-murex.vercel.app/',
-    tech: ['React', 'Tailwind', 'E-Commerce'],
-  },
-  {
     title: "Daddy Soda House",
     cat: 'Web App',
     type: 'Client Project',
@@ -79,15 +82,15 @@ const allProjects = [
     tech: ['React', 'Tailwind', 'IoT Dashboard', 'Web App'],
   },
   {
-    title: 'Vita Golden City Official',
+    title: 'HEMAIRA HAUTE JOAILLERIE',
     cat: 'SEO',
-    type: 'Client Project',
-    industry: 'Media & Entertainment',
-    desc: 'A promotional portfolio website for Vita\'s #1 content creator and brand promoter, reaching 200,000+ followers with authentic regional content.',
-    outcome: 'Enhanced digital presence for brand collaborations and content showcasing',
-    image: vitaGoldenCityImg,
-    link: 'https://www.vitagoldencity.com/',
-    tech: ['SEO', 'React', 'Tailwind'],
+    type: 'Demo Showcase',
+    industry: 'Jewelry & Luxury',
+    desc: 'High-end Indian luxury gold and diamond jewelry E-Commerce platform crafted for bespoke royal Kundan, Polki, Solitaires and Temple creations.',
+    outcome: 'Premium shopping experience with elegant product discovery and inquiry flow',
+    image: goldShopImg,
+    link: 'https://gold-shop-demo-murex.vercel.app/',
+    tech: ['React', 'Tailwind', 'E-Commerce'],
   },
   {
     title: 'Hotel Matoshree Dharashiv',
@@ -110,6 +113,17 @@ const allProjects = [
     image: solvenImg,
     link: 'https://solven.in/',
     tech: ['SEO', 'Next.js', 'Tailwind'],
+  },
+  {
+    title: 'Vita Golden City Official',
+    cat: 'SEO',
+    type: 'Client Project',
+    industry: 'Media & Entertainment',
+    desc: 'A promotional portfolio website for Vita\'s #1 content creator and brand promoter, reaching 200,000+ followers with authentic regional content.',
+    outcome: 'Enhanced digital presence for brand collaborations and content showcasing',
+    image: vitaGoldenCityImg,
+    link: 'https://www.vitagoldencity.com/',
+    tech: ['SEO', 'React', 'Tailwind'],
   },
   {
     title: 'Scale Alpha',
@@ -254,9 +268,11 @@ const allProjects = [
 
 const ProjectsPage = () => {
   const [filter, setFilter] = useState('All');
-  const filters = ['All', 'Website', 'E-Commerce', 'Web App', 'SEO'];
+  const filters = ['All', 'Website', 'E-Commerce', 'Web App', 'SEO', 'Healthcare & Pharma'];
   const projectsOnly = allProjects.filter(p => p.cat !== 'Our Products');
-  const shown = filter === 'All' ? projectsOnly : projectsOnly.filter(p => p.cat === filter);
+  const shown = filter === 'All'
+    ? projectsOnly
+    : projectsOnly.filter(p => p.cat === filter || (p.extraCats && p.extraCats.includes(filter)));
 
   return (
     <>
